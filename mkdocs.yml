@@ -1,0 +1,48 @@
+site_name: CoSIM - CETRAN open-source SIMulation framework
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - python
+  features:
+    - navigation.path
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+  custom_dir: docs/overrides
+
+copyright: Copyright &copy; 2024  Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
+extra:
+  generator: false
+
+nav:
+- 'index.md'
+- 'Getting started':
+  - 'Architecture': 'getting_started/architecture.md'
+  - 'Map creation workflow' : 'getting_started/mapCreation.md'
+- 'CoSIM framework':
+  - 'Bridge client': 'cosim_framework/bridgeClient.md'
+  - 'Bridge server': 'cosim_framework/bridgeServer.md'
+  - 'Scenario framework': 'cosim_framework/scenarioFramework.md'
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_source: false
+            docstring_section_style: list
+            ignore_init_summary: false
+            merge_init_into_class: true
+            show_root_toc_entry: true
+            show_object_full_path: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            heading_level: 2
+  - search
+  - print-site:
+
+
