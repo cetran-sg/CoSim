@@ -1,4 +1,4 @@
-site_name: CoSIM - CETRAN open-source SIMulation framework
+site_name: CoSim - CETRAN open-source Simulation framework
 
 theme:
   name: material
@@ -21,10 +21,10 @@ nav:
 - 'Getting started':
   - 'Architecture': 'getting_started/architecture.md'
   - 'Map creation workflow' : 'getting_started/mapCreation.md'
-- 'CoSIM framework':
+- 'CoSim framework':
+  - 'CoSim Manager': 'cosim_framework/cosimManager.md'
   - 'Bridge client': 'cosim_framework/bridgeClient.md'
   - 'Bridge server': 'cosim_framework/bridgeServer.md'
-  - 'Scenario framework': 'cosim_framework/scenarioFramework.md'
 
 plugins:
   - mkdocstrings:

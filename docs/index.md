@@ -11,10 +11,10 @@ CoSIM stands for CETRAN open-source SIMulation framework. The framework is modul
 
 The co-simulation architecture incorporates the following elements:
 
-1. A highly customizable and modular simulation and scenario framework built on top of the open-source [Carla simulator](https://github.com/carla-simulator/carla).
-2. A reference traffic simulation implementation using the open-source [SUMO microscopic traffic simulator](https://github.com/eclipse-sumo/sumo) co-simulated with Carla.
-3. A reference implementation of high-fidelity sensor co-simulation from [Ansys AVXcelerate](https://www.ansys.com/products/av-simulation/ansys-avxcelerate-sensors). A valid AVXcelerate license is required to use this functionality.
-4. A reference ADS bridge to [Baidu Apollo](https://github.com/ApolloAuto/apollo) from the Carla simulation framework. The bridge is highly parallelized with multiprocessing-based Carla clients and communicates over a custom low overhead TCP messaging protocol developed by CETRAN.
+1. A highly customizable and modular simulation framework built on top of the open-source [Carla simulator](https://github.com/carla-simulator/carla).
+2. A reference ADS bridge to [Baidu Apollo](https://github.com/ApolloAuto/apollo) from the Carla simulation framework. The bridge is highly parallelized with multiprocessing-based Carla clients and communicates over a custom low overhead TCP messaging protocol developed by CETRAN.
+3. A reference traffic simulation implementation using the open-source [SUMO microscopic traffic simulator](https://github.com/eclipse-sumo/sumo) co-simulated with Carla.
+4. A reference implementation of high-fidelity sensor co-simulation from [Ansys AVXcelerate](https://www.ansys.com/products/av-simulation/ansys-avxcelerate-sensors). A valid AVXcelerate license is required to use this functionality.
 5. A map creation workflow with [Mathworks RoadRunner](https://www.mathworks.com/products/roadrunner.html) to build accurate maps for each of the tools in the simulation toolchain.
 6. And finally, various custom-developed tools and scripts used to facilitate interconnection between disparate aspects of the simulation framework.
 
@@ -34,7 +34,7 @@ The framework is able to output sensor data and incorporate realistic and random
             cyberReader.py                  # Module to read control commands from Apollo CyberRT.
             cyberWriter.py                  # Module to write simulation messages into Apollo CyberRT.
         sim/
-            main.py                         # The main script for the CoSIM simulation framework.
+            cosimManager.py                         # The main script for the CoSIM simulation framework.
             ApolloBridgeClient.py           # The main client-side classes for the Apollo bridge.
             ApolloBridgeClient_Parser.py    # Methods to encode and decode ProtoBuf messages as required by Apollo.
 

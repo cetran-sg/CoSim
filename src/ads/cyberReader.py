@@ -1,5 +1,3 @@
-# ---Dependency for and called from bridgeServer.py--- #
-
 # Python class for reading from CyberRT
 
 from ctypes import sizeof

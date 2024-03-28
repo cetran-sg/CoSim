@@ -1,16 +1,12 @@
 # ---Run from machine running the Carla simulation--- #
-# ---Called from the main.py Python script--- #
+# ---Called from the cosimManager.py script--- #
 # !!! Do not run this standalone. Objects are initialized and their functions called from main.py !!! #
 
 
-# Check the HOST and PORT match the Apollo machine
-HOST = '192.168.1.15'
-
-PORT = 9999
+HOST = CONFIG.APOLLO_HOST
+PORT = CONFIG.APOLLO_PORT
 
 import pprint
-
-# from cyber_py import cyber
 import time
 import datetime
 import os
@@ -23,8 +19,8 @@ import cv2
 import struct
 import netstruct
 
-# Module containing the encoder functions to generate and serialize the protoBuf messages
-from ApolloBridgeClient_Parser import *
+# Module containing the encoder functions to generate and serialize the protoBuf messages for Apollo
+from apolloEncodeDecode import *
 
 # Control Command message type to decode the received binary message and read from Prescan
 #from protoLib.control_cmd_pb2 import ControlCommand

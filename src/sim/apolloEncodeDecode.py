@@ -1,4 +1,4 @@
-# ---Module which encodes ProtoBuf messages from the simulation data obtained from MATLAB--- #
+# ---Module which encodes and decodes ProtoBuf messages from the simulation data and Baidu Apollo--- #
 
 from google.protobuf.internal.encoder import _VarintBytes
 from google.protobuf.internal.decoder import _DecodeVarint32
@@ -8,13 +8,10 @@ import datetime
 import os
 import numpy as np
 import random
-import pyproj
-import utm
-from pyproj import CRS
-from pyproj import Proj
 import utm
 from transforms3d.euler import euler2mat, quat2euler, euler2quat
 import math
+import config as CONFIG
 
 # Import the generated Python ProtoBuf message classes
 from modules.common_msgs.perception_msgs.perception_obstacle_pb2 import PerceptionObstacles, PerceptionObstacle
@@ -33,9 +30,6 @@ from modules.common_msgs.transform_msgs.transform_pb2 import TransformStampeds,T
 # from modules.common_msgs.perception_msgs.traffic_light_detection_pb2 import TransformStampeds,TransformStamped
 # from modules.common_msgs.sensor_msgs.radar_pb2 import ContiRadar
 
-# from multiprocessing import Process
-
-# FRAME_INTERVAL=1.45
 GPSepoch = time.mktime(datetime.datetime.strptime(
             "06/01/1980", "%d/%m/%Y").timetuple())
 currentTime = time.time()
@@ -43,26 +37,35 @@ currentTime = time.time()
 '''
 The Carla and Apollo maps are generated from Mathworks RoadRunner.
 Carla coordinate system is the same as the exported map coordinates except with -y
-Apollo map has a very large offset which is mentioned below and is applied to the localization messages
+Apollo map has an arbitrary offset which is specified in the config file and used here.
+
+To find this offset, create a 5m long road from (0,0) to (0,5) in RoadRunner. Export the OpenDrive (.xodr) and Apollo map (.txt, .bin) formats.
+From the .xodr, find the ID of the road. Find the same road ID in the Apollo .txt file and note the x and y values. These values are the offset. 
 '''
-# APOLLO_MAP_OFFSET_X = 833978.5569
-APOLLO_MAP_OFFSET_X = 833964.71433961485
-APOLLO_MAP_OFFSET_Y = 9999787.0663516354
-
-
-# crsMercatorProj = CRS.from_proj4("+proj=tmerc +lat_0=1.351823806386649 +lon_0=103.6940212315423 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +geoidgrids=egm96_15.gtx +vunits=m +no_defs")
-# crsUTMProj = CRS.from_epsg(32648)
-
-# projTransformer = pyproj.Transformer.from_crs(crsMercatorProj,crsUTMProj)
-
-projConv = Proj('+proj=tmerc +lat_0=1.35445821465432 +lon_0=103.695726920698 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +vunits=m +no_defs', preserve_units=True)
+APOLLO_MAP_OFFSET_X = CONFIG.APOLLO_MAP_OFFSET_X
+APOLLO_MAP_OFFSET_Y = CONFIG.APOLLO_MAP_OFFSET_Y
 
 def encode_POmsgs(objCount, objIDs, objType, objHeadings, objLats, objLons, objutmx, objutmy, objVelXs, objVelYs, objBBxs, objBBys, objBBzs, t, seq):
-    """ 
+    """ Package and serialize actor snapshot data from the simulator into Apollo's Perception Obstacle message
         
         Args:
-
+            objCount : Number of objects/obstacles in current simulation snapshot
+            objIDs : Unique identifier assigned to each object/obstacle
+            objType : Type of object (vehicle, pedestrian, cones etc.)
+            objHeadings : Heading of each object
+            objLats : Latitude of each object
+            objLons : Longitude of each object
+            objutmx : UTM X-coordinate of each object
+            objutmy : UTM Y-coordinate of each object
+            objVelXs : Velocity of each object in the X-axis
+            objVelYs : Velocity of each object in the Y-axis
+            objBBxs : Bounding box dimension of each object in the X-axis
+            objBBys : Bounding box dimension of each object in the Y-axis
+            objBBzs : Bounding box dimension of each object in the Z-axis
+            t : Timestamp
+            seq : Sequence number
         Returns:
+            Perception Obstacles message as a bytestring
 
     """
     msg = PerceptionObstacle()
@@ -71,7 +74,6 @@ def encode_POmsgs(objCount, objIDs, objType, objHeadings, objLats, objLons, obju
     # header msgs
     MSGS.header.sequence_num = int(seq)
     MSGS.header.timestamp_sec = time.time()
-    # MSGS.header.timestamp_sec = time.time() + t
     MSGS.header.module_name = 'perception_obstacle'
 
     # GPS time in seconds
@@ -87,10 +89,6 @@ def encode_POmsgs(objCount, objIDs, objType, objHeadings, objLats, objLons, obju
             lon = float(objLons[i])
             tStart = time.time()
             
-            # utmx, utmy,_,_ = utm.from_latlon(lat,lon)
-            # utmx, utmy = projConv(lon,lat)
-            
-
             tStop = time.time()
             projTimes.append(tStop - tStart)
 
@@ -100,34 +98,29 @@ def encode_POmsgs(objCount, objIDs, objType, objHeadings, objLats, objLons, obju
             msg.velocity.x = float(objVelXs[i])
             msg.velocity.y = float(objVelYs[i])
 
-            # bb_w = 2.13
-            # bb_h = 1.41
-            # bb_l = 4.71
-
             msg.length = float(objBBxs[i])
             msg.width = float(objBBys[i])
             msg.height = float(objBBzs[i])
 
-            # msg.width = bb_w
-            # msg.length = bb_l
-            # msg.height = bb_h
-
             MSGS.perception_obstacle.extend([msg])
-
-    # print(projTimes)
-
-    # print("\nPO encode time elapsed " + str(time.time()-initTime))
-    # print(MSGS)
     binMSGS = MSGS.SerializeToString()
     return binMSGS
 
 def encode_IMUmsgs(avelX,avelY,avelZ, accX, accY, accZ, t, seq):
-    """ 
+    """ Package and serialize ego vehicle IMU data from the simulator to Apollo's format
         
         Args:
+            avelX : Angular velocity in the X-axis
+            avelY : Angular velocity in the Y-axis
+            avelZ : Angular velocity in the Z-axis
+            accX : Acceleration in the X-axis
+            accY : Acceleration in the Y-axis
+            accZ : Acceleration in the Z-axis
+            t : Timestamp
+            seq : Sequence number
 
         Returns:
-
+            IMU message as a bytestring
         """
     msg = Imu()
 
@@ -149,12 +142,23 @@ def encode_IMUmsgs(avelX,avelY,avelZ, accX, accY, accZ, t, seq):
     return binmsg
 
 def encode_corrIMUmsgs(avelX,avelY,avelZ,eulX,eulY,eulZ,accX,accY,accZ,heading,t):
-    """ 
+    """ Package and serialize ego vehicle Corrected IMU data from the simulator to Apollo's format
         
         Args:
+            avelX : Angular velocity in the X-axis
+            avelY : Angular velocity in the Y-axis
+            avelZ : Angular velocity in the Z-axis
+            eulX : Euler angle in the X-axis
+            eulY : Euler angle in the Y-axis
+            eulZ : Euler angle in the Z-axis
+            accX : Acceleration in the X-axis
+            accY : Acceleration in the Y-axis
+            accZ : Acceleration in the Z-axis
+            heading : Heading (yaw)
+            t : Timestamp
 
         Returns:
-
+            Corrected IMU message as a bytestring
         """
     msg = CorrectedImu()
 
@@ -179,11 +183,18 @@ def encode_corrIMUmsgs(avelX,avelY,avelZ,eulX,eulY,eulZ,accX,accY,accZ,heading,t
     return binmsg
 
 def encode_BPmsgs(lat,lon,utmx, utmy, t,seq):
-    """ 
+    """ Package and serialize ego vehicle Best Pose data from the simulator to Apollo's format
     
     Args:
+        lat : Latitude
+        lon : Longitude
+        utmx : UTM X-coordinate
+        utmy : UTM Y-coordinate
+        t : Timestamp
+        seq : Sequence number
 
     Returns:
+        Best Pose message as a bytestring
 
     """
     msg = GnssBestPose()
@@ -195,8 +206,6 @@ def encode_BPmsgs(lat,lon,utmx, utmy, t,seq):
     msg.measurement_time = t+currentTime
     msg.sol_status = 0
     msg.sol_type = 50
-    # msg.latitude = lat
-    # msg.longitude = lon
     msg.height_msl = 0.0
     msg.undulation = 0.0
     msg.datum_id = 61
@@ -220,20 +229,14 @@ def encode_BPmsgs(lat,lon,utmx, utmy, t,seq):
     return binmsg
 
 def encode_GPSmsg(lat,lon,utmx,utmy,qw,qx,qy,qz,velx,vely,heading,t,seq):
-    """ 
+    """ Package and serialize ego vehicle GPS data from the simulator to Apollo's format
     
     Args:
 
     Returns:
-
+        GPS message as a bytestring
     """
     msg = Gps()
-
-    # Apollo expects coordinates in UTM, we use PyProj to convert it as such
-    # print(lat,lon)
-
-    # utmx, utmy,_,_ = utm.from_latlon(lat,lon)
-    # utmx, utmy = projConv(lon,lat)
     msg.header.timestamp_sec = time.time()
     msg.header.sequence_num = int(seq)
 
@@ -256,12 +259,12 @@ def encode_GPSmsg(lat,lon,utmx,utmy,qw,qx,qy,qz,velx,vely,heading,t,seq):
     return binmsg
 
 def encode_INSmsgs(t,seq):
-    """ 
+    """ Package and serialize ego vehicle INS data from the simulator to Apollo's format
         
     Args:
 
     Returns:
-
+        INS message as a bytestring
     """
     msg = InsStat()
 
@@ -274,12 +277,12 @@ def encode_INSmsgs(t,seq):
     return binmsg
 
 def encode_Chamsgs(t,lat,lon,utmx,utmy,odo,heading,vel,throttle,brake,steering):
-    """ 
+    """ Package and serialize ego vehicle chassis data from the simulator to Apollo's format
     
     Args:
 
     Returns:
-
+        Chassis message as a bytestring
     """
     msg = Chassis()
     now = datetime.datetime.now()
@@ -294,9 +297,6 @@ def encode_Chamsgs(t,lat,lon,utmx,utmy,odo,heading,vel,throttle,brake,steering):
     msg.gear_location = 1
 
     msg.header.module_name = 'chassis'
-
-    # msg.chassis_gps.latitude = lat
-    # msg.chassis_gps.longitude = lon 
     msg.chassis_gps.altitude = 0.0
     msg.chassis_gps.heading = float(heading)
     msg.chassis_gps.year = now.year
@@ -311,12 +311,12 @@ def encode_Chamsgs(t,lat,lon,utmx,utmy,odo,heading,vel,throttle,brake,steering):
     return binmsg
 
 def encode_Heamsgs(t,seq,heading):
-    """ 
+    """ Package and serialize ego vehicle heading from the simulator to Apollo's format
     
     Args:
 
     Returns:
-
+        Heading message as a bytestring
     """
     msg = Heading()
 
@@ -329,26 +329,17 @@ def encode_Heamsgs(t,seq,heading):
     return binmsg
 
 def encode_Posemsgs(lat,lon,utmx,utmy,qw,qx,qy,qz,velx,vely,heading,avelX,avelY,avelZ, accX, accY, accZ,t,seq):
-    """ 
+    """ Package and serialize ego vehicle pose from the simulator to Apollo's format
     
     Args:
 
     Returns:
-
+        Pose message as a bytestring
     """
     msg = LocalizationEstimate()
-
-    # Apollo expects coordinates in UTM, we use PyProj to convert it as such
-    # utmx, utmy,_,_ = utm.from_latlon(lat,lon)
-    # utmx, utmy = projConv(lon,lat)
     msg.header.timestamp_sec = time.time()
     msg.header.sequence_num = int(seq)
     msg.header.frame_id = 'novatel'
-    # print("\n")
-    # print("UTMlib: ", utmx, utmy)
-
-    # print("Projlib: ", utmx1, utmy1)
-    # print("\n")
     msg.pose.position.x = utmx+APOLLO_MAP_OFFSET_X
     msg.pose.position.y = -utmy+APOLLO_MAP_OFFSET_Y
     msg.pose.position.z = 0
@@ -378,12 +369,12 @@ def encode_Posemsgs(lat,lon,utmx,utmy,qw,qx,qy,qz,velx,vely,heading,avelX,avelY,
     return binmsg 
 
 def encode_Tfmsgs(utmx,utmy,eulx,euly,eulz,t,seq):
-    """ 
+    """ Package and serialize ego vehicle transform from the simulator to Apollo's format
     
     Args:
 
     Returns:
-
+        Transform message as a bytestring
     """
     MSGS = TransformStampeds()
     MSGS.header.timestamp_sec = time.time()
@@ -435,22 +426,23 @@ def ConvertPoints(p,t):
 
     """
     point =PointXYZIT()
-    #print(p)
     point.intensity,point.timestamp,point.x,point.y,point.z = [int(p.intensity*100),t,p.point.x,-p.point.y,p.point.z]
     return point
 
-def encode_PC(sampleData, j):
-    """ 
+def encode_PC(pcData, seq):
+    """ Package and serialize LiDAR pointcloud from the simulator to Apollo's format
         
     Args:
+        pcData : Pointcloud data from the simulator
+        seq : Sequence number
 
     Returns:
-
+        Pointcloud message as a bytestring
     """    
     msg = PointCloud()
     msg.header.timestamp_sec = time.time()
     t = int(time.time())
-    msg.header.sequence_num = j
+    msg.header.sequence_num = seq
     msg.width = 11520
     msg.height = 1
     msg.measurement_time = time.time()
@@ -461,10 +453,9 @@ def encode_PC(sampleData, j):
     timeNow = time.time()
     
     lidar_data = np.fromstring(
-            bytes(sampleData.raw_data), dtype=np.float32)
+            bytes(pcData.raw_data), dtype=np.float32)
     lidar_data = np.reshape(
             lidar_data, (int(lidar_data.shape[0] / 4), 4))
-    # lidar_data[:, 1] *= -1
 
     for lidar_point in lidar_data:
             if (lidar_point[0]**2 + lidar_point[1]**2) >= 2:
@@ -474,65 +465,53 @@ def encode_PC(sampleData, j):
                 cyber_point.z = lidar_point[2]
                 msg.point.append(cyber_point)
 
-
-    # pointList = [ConvertPoints(i, t) for i in sampleData if (i.point.x**2 + i.point.y**2)>6]
-    # msg.point.extend(pointList)
-    #print('number of points in a sample = %d' %(i))
     timeAfter = time.time()
-
     binmsg = msg.SerializeToString()
-
     procTime = timeAfter - timeNow
-    # print("ProcTime: " + str(procTime))
     return binmsg
 
 
-def encode_IMG(imgData, j):
-    """ 
+def encode_IMG(imgData, seq):
+    """ Package and serialize camera images from the simulator to Apollo's format
         
     Args:
+        imgData : Image data from the simulator
+        seq: Sequence number
 
     Returns:
-
+        Image data as a bytestring
     """    
     msg = Image()
     msg.header.timestamp_sec = time.time()
     
-    msg.header.sequence_num = j
+    msg.header.sequence_num = seq
     msg.width = 1920
     msg.height = 1080
     msg.encoding = "rgb8"
-    #msg.format = "jpg"
     msg.frame_id = "camera"
-    #pixels = PIL_Image.open(DATAROOT+"/"+sampleData['filename'])
-    #msg.data = pixels.tobytes()
-    
-    #msg.data=sampleData.tobytes()
     msg.data=imgData
 
     binmsg = msg.SerializeToString()
     return binmsg
 
 
-def encode_CompressedIMG(imgData, j):
-    """ 
+def encode_CompressedIMG(imgData, seq):
+    """ Package and serialize compressed camera images from the simulator to Apollo's format
         
     Args:
+        imgData : Image data from the simulator
+        seq : Sequence number
 
     Returns:
-
+        Compressed image data as a bytestring
     """    
     msg = CompressedImage()
     msg.header.timestamp_sec = time.time()
     
-    msg.header.sequence_num = j
+    msg.header.sequence_num = seq
 
     msg.format = "jpg"
     msg.frame_id = "camera"
-    #pixels = PIL_Image.open(DATAROOT+"/"+sampleData['filename'])
-    #msg.data = pixels.tobytes()
-    
-    #msg.data=sampleData.tobytes(encoder_name='jpeg')
     msg.data=imgData
     binmsg = msg.SerializeToString()
     return binmsg

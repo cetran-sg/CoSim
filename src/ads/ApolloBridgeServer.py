@@ -1,7 +1,6 @@
 # ---Run inside the Apollo Docker container--- #
 # ---Ensure the HOST and PORT set in main() matches the client--- #
 
-# Python script for the Prescan-Apollo bridge server
 import pprint
 import os
 import struct
@@ -15,7 +14,6 @@ import multiprocessing
 from cyber.python.cyber_py3 import cyber
 
 # Classes for decoding binary messages and writing to CyberRT
-# from cyberWriter import *
 from cyberWriter import *
 from cyberReader import *
 
@@ -208,8 +206,7 @@ class Server():
 
 # Main function, HOST and PORT are declared and the bridgeServer object is initialized and started
 def main():
-    HOST = '127.0.0.1'
-    # HOST = '172.21.77.193'  # Standard loopback interface address (localhost) - change to IP of Apollo PC if any issues
+    HOST = '127.0.0.1' # Standard loopback interface address (localhost) - change to IP of Apollo PC if any issues
     PORT = 9999        # Port to listen on (non-privileged ports are > 1023)
     bridgeServer = Server(HOST, PORT)
     bridgeServer.start()

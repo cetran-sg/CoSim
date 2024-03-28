@@ -10,7 +10,6 @@ import os
 
 # Generated protoBuf message classes
 
-
 class CyberWriter():
     def __init__(self, nodeName ,msgDict):
         # CyberRT is initialized
