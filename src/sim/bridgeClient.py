@@ -1,6 +1,4 @@
-# ---Run from machine running the Carla simulation--- #
-# ---Called from the cosimManager.py script--- #
-# !!! Do not run this standalone. Objects are initialized and their functions called from main.py !!! #
+# Objects here are initialized and their functions called from cosimManager.py #
 
 
 HOST = CONFIG.APOLLO_HOST
@@ -20,7 +18,7 @@ import struct
 import netstruct
 
 # Module containing the encoder functions to generate and serialize the protoBuf messages for Apollo
-from apolloEncodeDecode import *
+from apolloEncode import *
 
 # Control Command message type to decode the received binary message and read from Prescan
 #from protoLib.control_cmd_pb2 import ControlCommand
@@ -67,20 +65,18 @@ class BridgeClient():
 
         """
         gap = now - prevMsg
-        skips = (gap- gap%delay)/delay #ideally skips is 0
+        skips = (gap - gap%delay)/delay #ideally skips is 0
         if skips > 20:
             return prevMsg + delay*(skips)
         else:
             return prevMsg + delay
 
-
-    # 
     def sendBinMsg(self, data, msgType):
-        """ Netstruct protocol function to send packaged data as binary
+        """ Netstruct protocol function to package and send binary data
         
         Args:
-            data :
-        Returns:
+            data bytestring : The data to send
+            msgType string : Message type 
 
         """
         # print("msgstring: " + str(self.msgString))
@@ -94,10 +90,6 @@ class BridgeClient():
     
     def register(self):
         """ Register a client object to the server
-        
-        Args:
-
-        Returns:
 
         """
         print(self.msgString)
@@ -113,15 +105,12 @@ class BridgeClient():
     
     def decodeSimData(self,binMsg):
         """ Decodes and return the message received from the server, to be customized based on the client role.
-        
 
         """
         return None
 
     def recvSimData(self):
         """ Function to receive messages from the server
-        
-        Args:
 
         Returns:
             The message from the server, decoded with self.decodeSimData
@@ -131,11 +120,7 @@ class BridgeClient():
     
      # Paired function to sendCCMsg from ApolloBridgeServer.py
     def recvMsg(self):
-        """ 
-        
-        Args:
-
-        Returns:
+        """ Netstruct function to receive message from apolloBridgeServer
 
         """
         binMsgLen = self.recvall(4)
@@ -143,13 +128,6 @@ class BridgeClient():
         return self.recvall(msgLen[0])
 
     def recvall(self, count):
-        """ 
-        
-        Args:
-
-        Returns:
-
-        """
         buf = b''
         while count:
             newbuf = self.sock.recv(count)
@@ -172,22 +150,20 @@ class ApolloBridgeClient_ActorGTPublisher(BridgeClient):
         super().__init__(hostIP,hostPort,b'ActorGTPub',delays,lastMsgTime)
 
     def sendSensorData(self,data,type):
-        """ 
+        """ Wrapper function to send sensor data using the netstruct protocol
         
         Args:
-
-        Returns:
+            data bytestring : Sensor data as a bytestring
+            type string : String specifying type of sensor data
 
         """
         self.sendBinMsg(data, type)
 
-    # Function to send Simulator data from MATLAB. The arguments are populated from the MATLAB script
     def sendActorGroundTruth(self, dataList):
-        """ 
+        """ Function to send actor ground truth data from the simulator 
         
         Args:
-
-        Returns:
+            dataList tuple : Contains all parameters regarding actors in the simulation frame
 
         """
         (t, seq, objCount, objID, objType, objHeading, objLat, objLon, objutmx, objutmy, objVelX, objVelY, BBx, BBy,BBz) = dataList
@@ -217,14 +193,12 @@ class ApolloBridgeClient_EgoPublisher(BridgeClient):
         super().__init__(hostIP,hostPort,b'EgoPub',delays,nextMsgTime)
         
     def sendEgoData(self, dataList):
-        """ 
+        """ Function to send ego vehicle localization and other data to the ADS
         
         Args:
-
-        Returns:
+            dataList tuple : Contains all parameters regarding the ego in the simulation frame
 
         """
-        # print("Sent")
         enableLocMsgs = False
         (t, seq, lat, lon, utmx, utmy, qw, qx, qy, qz, accX,accY,accZ,avelX,avelY,avelZ,odo,eulx,euly,eulz,vel,throttle,brake,steering,velx, vely, heading)= dataList
 
@@ -278,7 +252,7 @@ class ApolloBridgeClient_EgoPublisher(BridgeClient):
 
 class ApolloBridgeClient_ImgPublisher(BridgeClient):
     def __init__(self,hostIP,hostPort):
-        """Generic Bridge Client
+        """ Generic Bridge Client
 
         Args:
             hostIP string: The IP of the ads host (server)
@@ -289,11 +263,10 @@ class ApolloBridgeClient_ImgPublisher(BridgeClient):
 
     # Function to send Simulator data from MATLAB. The arguments are populated from the MATLAB script
     def sendcImgData(self, cimgData):
-        """ 
+        """ Function to send compressed image data from simulator to ADS
         
         Args:
-
-        Returns:
+            cimgData : Compressed image data from the simulator
 
         """
         # Messages are encoded using the protoBuf message format expected from Apollo
@@ -311,11 +284,10 @@ class ApolloBridgeClient_ImgPublisher(BridgeClient):
         self.sendBinMsg(cImg, b'cImg')
 
     def sendImgData(self, imgData):
-        """ 
+        """ Function to send image data from simulator to ADS
         
         Args:
-
-        Returns:
+            imgData : Image data from the simulator
 
         """
 
@@ -346,11 +318,10 @@ class ApolloBridgeClient_PCPublisher(BridgeClient):
 
     # Function to send Simulator data from MATLAB. The arguments are populated from the MATLAB script
     def sendPCData(self, PCData):
-        """ 
+        """ Function to send pointcloud data from simulator to ADS
         
         Args:
-
-        Returns:
+            cimgData : Compressed image data from the simulator
 
         """
         # Messages are encoded using the protoBuf message format expected from Apollo
@@ -368,9 +339,13 @@ class ApolloBridgeClient_Subscriber(BridgeClient):
         """
         super().__init__(hostIP,hostPort,b'Subscriber')
 
-    
-
     def decodeSimData(self,binMsg):
+        ''' Function to decode the control command data received from the ADS
+
+            Args:
+                binMsg bytestring : Binary message from the ADS to be decoded
+        
+        '''
         ccmsg = ControlCommand()
         ccmsg.ParseFromString(binMsg)
         #gear_location = ccmsg.gear_location

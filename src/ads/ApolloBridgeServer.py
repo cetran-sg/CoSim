@@ -32,20 +32,17 @@ from modules.common_msgs.transform_msgs.transform_pb2 import TransformStampeds
 from modules.common_msgs.sensor_msgs.pointcloud_pb2 import PointCloud
 from modules.common_msgs.perception_msgs.perception_obstacle_pb2 import PerceptionObstacles, PerceptionObstacle
 
-def ccHandler(server,conn, addr, prID):
-    """Handler for Control Command messages
-    Args:
-        conn :
-        addr :
-        prID :
+def ccHandler(server, conn, addr, prID):
+    """ Handler for control command messages to be published to the simulator
+
     """
 
     ccBinList = None
     # CyberReader instance is created
-    print("create reader")
+    print("Create reader")
     cyberReader = cReader()
     cyberReader.makeReader()
-    print("done")
+    print("Reader created")
 
     while True:
         if cyberReader.dataAvailableToSend is True:
@@ -58,14 +55,9 @@ def ccHandler(server,conn, addr, prID):
         else:
             pass
 
-def connHandler(server,conn, addr, prID, initmsgType):
-    """Connection handler. Two will be created for each session as a publisher and subscriber (on server side)
+def connHandler(server, conn, addr, prID, initmsgType):
+    """ Connection handler for subscribed messages from the simulator
     
-    Args:
-        conn :
-        addr :
-        prID :
-        initmsgType :
     """
 
     try:
@@ -125,16 +117,15 @@ class Server():
         """ Main bridge server class file with host and port definitions
         
         Args:
-            host string:
-            port int:
+            host string: IP of the bridge server, typically '127.0.0.1' (but if Carla is running on another machine, give an IP on the same subnet)
+            port int: Port of the bridge server, typically 9999
         """
         self.host = host
         self.port = port
         self.socket = None
 
     def start(self):
-        """ Start the server
-        
+        """ Start the server, accept connections from clients and assign them to handlers (each on a different process)
         """
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -143,7 +134,6 @@ class Server():
         self.socket.listen(5)
         print("\n-- Bridge Server started. Awaiting client --\n")
         prID = 1
-        # Accept connections from clients and assign them to handlers (each on a different process)
         while True:
             conn, address = self.socket.accept()
             print("\n-- Client connected --\n")

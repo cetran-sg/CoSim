@@ -14,6 +14,9 @@ from modules.common_msgs.control_msgs.control_cmd_pb2 import ControlCommand
 # Class definition for cyberReader
 class cReader():
     def __init__(self):
+        ''' Initialize CyberReader object
+        
+        '''
         # CyberRT is initialized
         cyber.init()
         self.cNode = None
@@ -31,6 +34,9 @@ class cReader():
 
     # To read messages from CyberRT, a callback function must be specified
     def callback(self, data):
+        ''' Callback function to get control command messages from CyberRT
+        
+        '''
         # Thread locked
         self.mutex.acquire()
         self.ccMsg = data
@@ -40,19 +46,29 @@ class cReader():
         # Thread unlocked
         self.mutex.release()
 
-    # Function to encode the CCmsg to binary (for sending to client)
     def encodeBinMsg(self, msg):
+        ''' Function to encode the control commands to binary for sending to the simulator
+        
+            Args:
+                msg : Control command message
+        '''
         binMsg = msg.SerializeToString()
         return binMsg
 
-    # Function to create a CyberRT reader and assign the callback defined above to it
     def makeReader(self):
+        ''' Function to create a CyberRT reader and assign the previously defined callback function to it
+        
+        '''
         # CyberRT node is created
         self.cNode = cyber.Node("ApolloCarlaReader")
         self.ccReader = self.cNode.create_reader("/apollo/control", ControlCommand, self.callback)
 
-    # Thread locked function to read from the ccBinMsg variable and ccBinMsgList to send to client
     def readMsgList(self, clearFlag = True):
+        ''' Thread locked function to read the control commands and control command list before sending to the simulator
+
+            Args:
+                clearFlag bool : Flag to indicate if the backlog of contol commands have been cleared or not
+        '''
         # Thread locked
         self.mutex.acquire()
         ccBinList = self.ccBinList[:]

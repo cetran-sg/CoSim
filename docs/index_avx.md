@@ -13,7 +13,10 @@ The co-simulation architecture incorporates the following elements:
 
 1. A highly customizable and modular simulation framework built on top of the open-source [Carla simulator](https://github.com/carla-simulator/carla).
 2. A reference ADS bridge to [Baidu Apollo](https://github.com/ApolloAuto/apollo) from the Carla simulation framework. The bridge is highly parallelized with multiprocessing-based Carla clients and communicates over a custom low overhead TCP messaging protocol developed by CETRAN.
-3. Various custom-developed tools and scripts used to facilitate interconnection between disparate aspects of the simulation framework.
+3. A reference traffic simulation implementation using the open-source [SUMO microscopic traffic simulator](https://github.com/eclipse-sumo/sumo) co-simulated with Carla.
+4. A reference implementation of high-fidelity sensor co-simulation from [Ansys AVXcelerate](https://www.ansys.com/products/av-simulation/ansys-avxcelerate-sensors). A valid AVXcelerate license is required to use this functionality.
+5. A map creation workflow with [Mathworks RoadRunner](https://www.mathworks.com/products/roadrunner.html) to build accurate maps for each of the tools in the simulation toolchain.
+6. And finally, various custom-developed tools and scripts used to facilitate interconnection between disparate aspects of the simulation framework.
 
 This simulation framework and its reference implementation, as described here, consist of open-source tools and components. However, the same general architecture can be used and supplanted with any commercial or custom/proprietary tools as needed.
 

@@ -287,11 +287,8 @@ def egoReader(CARLA_HOST, CARLA_PORT):
     try:
         # Connect to the client and retrieve the world object
         client = carla.Client(CARLA_HOST, CARLA_PORT)
-
         world = client.get_world()
-
         carlamap = world.get_map()
-
         spectator = world.get_spectator()
 
         client_pub = ApolloBridgeClient_EgoPublisher(CONFIG.APOLLO_HOST,CONFIG.APOLLO_PORT)
@@ -302,7 +299,6 @@ def egoReader(CARLA_HOST, CARLA_PORT):
         print('\n --- Ego vehicle ---')
 
         for actor in world.get_actors():
-                # print(actor.attributes.get('role_name'))
                 if actor.attributes.get('role_name') == 'hero':
                     egoID = actor.id
                     ego_vehicle = actor
@@ -324,7 +320,7 @@ def egoReader(CARLA_HOST, CARLA_PORT):
                     traffic_light.set_state(carla.TrafficLightState.Green)
 
             if CONFIG.egoOn:
-                # Third person View
+                # Third person view, updates the camera periodically to follow the ego vehicle
                 spectator.set_transform(carla.Transform(ego_transform.location + carla.Location(x=-10 * math.cos(math.radians(ego_transform.rotation.yaw)),
                                                                                                 y=-10 * math.sin(math.radians(ego_transform.rotation.yaw)),
                                                                                                 z=5),carla.Rotation(pitch=-15, yaw=ego_transform.rotation.yaw)))
@@ -349,17 +345,12 @@ def egoWriter(CARLA_HOST, CARLA_PORT):
     try:
         # Connect to the client and retrieve the world object
         client = carla.Client(CARLA_HOST, CARLA_PORT)
-
         world = client.get_world()
-        # spectator = world.get_spectator()
-        # Connect to the client and retrieve the world object
-
-        client_sub = ApolloBridgeClient_Subscriber(CONFIG.APOLLO_HOST,CONFIG.APOLLO_PORT)
+        client_sub = ApolloBridgeClient_Subscriber(CONFIG.APOLLO_HOST, CONFIG.APOLLO_PORT)
         client_sub.connectToServer()
         client_sub.register()
-        # print('Writer')
-
         ego_vehicle = None
+
         for actor in world.get_actors():
             if actor.attributes.get('role_name') == 'hero':
                 ego_vehicle = actor
@@ -367,10 +358,7 @@ def egoWriter(CARLA_HOST, CARLA_PORT):
         lastTime = t
         print("\n-- Started egoWriter process --\n")
         while True:
-            # print("waiting CC")
-            # ego_transform = ego_vehicle.get_transform()
             throttle, brake, steeringTarget, steeringRate = client_sub.recvSimData()
-            
             t = time.time()
             dt = t-lastTime
             lastTime = t
@@ -381,7 +369,7 @@ def egoWriter(CARLA_HOST, CARLA_PORT):
             steeringRate = steeringRate * sgn
             steeringAngle += steeringRate * dt
             
-            vehicleCC = carla.VehicleControl( throttle = throttle/100 ,brake = brake/100,steer=-steeringTarget/100 )
+            vehicleCC = carla.VehicleControl(throttle = throttle/100, brake = brake/100, steer=-steeringTarget/100)
             ego_vehicle.apply_control(vehicleCC)
             
     except Exception as e:
@@ -411,7 +399,6 @@ def scenarioPlayer(CARLA_HOST, CARLA_PORT):
         sleep(SCENARIO_DELAY)
         start_time = time.perf_counter()
         for actor in world.get_actors():
-            # print(actor.attributes.get('role_name'))
             if actor.attributes.get('role_name') == 'hero':
                 egoID = actor.id
                 ego_vehicle = actor
@@ -421,10 +408,8 @@ def scenarioPlayer(CARLA_HOST, CARLA_PORT):
         count = 0
         print("\n-- Started ScenarioPlayer process --\n")
         while True:
-            # print('Elapsed Time: ', elapsed_time)
             world_snapshot = world.wait_for_tick()
             ego_transform = ego_vehicle.get_transform()
-            #PID controller for Vehicles
             scManager.executeScenario(ego_transform, start_time)
             count +=1
 
@@ -434,7 +419,7 @@ def scenarioPlayer(CARLA_HOST, CARLA_PORT):
     finally:
         sys.exit()
 
-def cosimManager():
+def main():
 
     client = carla.Client(CONFIG.CARLA_HOST, CONFIG.CARLA_PORT)
     client.load_world(CONFIG.worldID)
@@ -455,11 +440,11 @@ def cosimManager():
     egoID = ego_vehicle.id
 
     ego_transform = ego_vehicle.get_transform()
+    # Initialize camera to follow the ego vehicle in third person view
     spectator.set_transform(carla.Transform(ego_transform.location + carla.Location(x=-10 * math.cos(math.radians(ego_transform.rotation.yaw)),
                                                                                     y=-10 * math.sin(math.radians(ego_transform.rotation.yaw)),z=5),
                                                                                     carla.Rotation(pitch=-15, yaw=ego_transform.rotation.yaw)))
 
-    
     """
     Initialization for bridge processes
     """
