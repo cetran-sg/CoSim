@@ -31,7 +31,7 @@ To get started, take a look at the [code documentation](https://cetran-sg.github
 
 ## License
 
-CoSim has been provided under the [Apache 2.0 license](https://github.com/cetran-sg/CoSim/blob/main/LICENSE.txt).
+CoSim has been provided under the [Apache License 2.0](https://github.com/cetran-sg/CoSim/blob/main/LICENSE.txt).
 
 ## Disclaimer
 
