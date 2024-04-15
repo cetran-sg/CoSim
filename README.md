@@ -27,7 +27,9 @@ This repository contains code for the CoSim framework. The CoSim framework is a 
             config.py                       # File containing configuration parameters
             sensorConfig.py                 # File containing configuration parameters pertaining to the sensor setup of the ego vehicle
 
-To get started, take a look at the [code documentation](https://cetran-sg.github.io/CoSim/).
+## Documentation
+
+To get started, take a look at the [code documentation](https://cetran-sg.github.io/CoSim/). The documentation contains an overview of the framework along with references to the various functions and modules contained within.
 
 ## License
 
