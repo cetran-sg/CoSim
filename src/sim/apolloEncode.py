@@ -5,10 +5,7 @@ from google.protobuf.internal.decoder import _DecodeVarint32
 
 import time
 import datetime
-import os
 import numpy as np
-import random
-import utm
 from transforms3d.euler import euler2mat, quat2euler, euler2quat
 import math
 import config as CONFIG
@@ -196,6 +193,8 @@ def encode_BPmsgs(lat, lon, utmx, utmy, t, seq):
     msg.header.frame_id = 'gps'
 
     msg.measurement_time = t+currentTime
+    # Some standard parameters to ensure correct GPS message encoding
+    # See https://github.com/ApolloAuto/apollo/blob/master/modules/common_msgs/sensor_msgs/gnss_best_pose.proto
     msg.sol_status = 0
     msg.sol_type = 50
     msg.height_msl = 0.0

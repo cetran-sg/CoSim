@@ -16,17 +16,23 @@ worldID = '0712'
 carla_ego_name = 'vehicle.lincoln.mkz_2017'
 
 # Ego spawn position and yaw
-ego_spawn_pos_x = -529.872
-ego_spawn_pos_y = -206.508
+ego_spawn_pos_x = -7.022+118.04-7.5
+ego_spawn_pos_y = 17.865-92.56+10
 ego_spawn_pos_z = 3
-ego_spawn_rot_yaw = 67.5
+ego_spawn_rot_yaw = 322.5
+
+# # Ego spawn position and yaw
+# ego_spawn_pos_x = -529.872
+# ego_spawn_pos_y = -206.508
+# ego_spawn_pos_z = 3
+# ego_spawn_rot_yaw = 67.5
 
 ## Flags for enabling or disabling various features
 # Flag to play scenario defined in scenarioManager
 scenarioPlayerFlag = True
 
 # Flag to send actor ground truth data to Apollo
-actorReaderFlag = False
+actorReaderFlag = True
 
 # Flag to send ego vehicle data to Apollo
 egoReaderFlag = True
@@ -36,8 +42,8 @@ egoWriterFlag = True
 
 # Flags to enable/disable camera and LiDAR sensor output
 # If camera is enabled, in the Apollo docker launch: cyber_launch start modules/drivers/tools/image_decompress/launch/image_decompress.launch
-camReaderFlag = True
-lidarReaderFlag = True
+camReaderFlag = False
+lidarReaderFlag = False
 
 '''
 The Carla and Apollo maps are generated from Mathworks RoadRunner.

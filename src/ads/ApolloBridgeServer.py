@@ -1,7 +1,6 @@
 # ---Run inside the Apollo Docker container--- #
 # ---Ensure the HOST and PORT set in main() matches the client--- #
 
-import pprint
 import os
 import struct
 import netstruct

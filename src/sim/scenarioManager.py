@@ -1,19 +1,21 @@
 import carla
-import random
-import sys
-import numpy as np
-from ApolloBridgeClient import *
+from bridgeClient import *
 import math
-import modules
 from time import sleep
-from concurrent.futures import ProcessPoolExecutor
-import multiprocessing
-from threading import Thread
-from agents.navigation.controller import VehiclePIDController
 from agents.navigation.controller_wpLoc import VehiclePIDController as VehiclePIDControllerLoc
 import time
-import pandas as pd
 
+'''
+This is an example Scenario Manager module which shows how actors
+can be spawned, waypoints drawn and actors moved based on these
+waypoints.
+
+The end-user may replace the code under spawnActors(), getWaypoints() and executeScenario()
+to create their own scenarios based on the Carla Python API framework.
+
+See https://carla.readthedocs.io/en/latest/python_api/#carlaactor and associated documentation.
+
+'''
 class ScenarioManager():
     def __init__(self, CARLA_HOST, CARLA_PORT):
         self.client = carla.Client(CARLA_HOST, CARLA_PORT)
@@ -24,14 +26,8 @@ class ScenarioManager():
         self.waypoints = self.client.get_world().get_map().generate_waypoints(distance=1.0)
 
         self.actorList = self.spawnActors()
-	    #### Wait before executing scenario ####
-        # sleep(1.0)
-
-        #initialise scenario
-
+        
     def spawnActors(self):
-
-        ##### EXAMPLE TO SPAWN ACTORS #####
 
         Spawn_npcA = carla.Transform(carla.Location(x=300.00+0*4.712, y=-214.70-0*3.714, z=2), carla.Rotation(yaw=142.5))
         Spawn_npcB = carla.Transform(carla.Location(x=300.00+1*4.712, y=-214.70-1*3.714, z=2), carla.Rotation(yaw=142.5))
@@ -52,6 +48,7 @@ class ScenarioManager():
         obs_npcB = self.world.spawn_actor(npcB_bp, Spawn_npcB)
         obs_npcC = self.world.spawn_actor(npcC_bp, Spawn_npcC)
         obs_npcD = self.world.spawn_actor(npcD_bp, Spawn_npcD)
+        self.getWaypoints()
 
         return (obs_npcA, obs_npcB, obs_npcC, obs_npcD)
     
@@ -64,6 +61,7 @@ class ScenarioManager():
         npcA_wp4 = carla.Transform(carla.Location(x=-38.973751, y=52.583321, z=0.540000), carla.Rotation(yaw=-38.248478))
         
         self.npcA_wp = [npcA_wp1,npcA_wp2,npcA_wp3,npcA_wp4]
+        self.npcA_wpCount = len(self.npcA_wp)
 
         npcB_wp1 = carla.Transform(carla.Location(x=92.795494, y=-52.169624, z=0.170165), carla.Rotation(yaw=141.751526))
         npcB_wp2 = carla.Transform(carla.Location(x=65.119583, y=-25.896183, z=0.320277), carla.Rotation(yaw=141.751526))
@@ -72,6 +70,7 @@ class ScenarioManager():
         npcB_wp5 = carla.Transform(carla.Location(x=-39.140507, y=51.834652, z=0.540000), carla.Rotation(yaw=141.751526))
 
         self.npcB_wp = [npcB_wp1,npcB_wp2,npcB_wp3,npcB_wp4,npcB_wp5]
+        self.npcB_wpCount = len(self.npcB_wp)
 
         npcC_wp1 = carla.Transform(carla.Location(x=149.935593, y=-92.756073, z=0.170000), carla.Rotation(yaw=141.751526))
         npcC_wp2 = carla.Transform(carla.Location(x=116.355492, y=-70.741814, z=0.170000), carla.Rotation(yaw=141.751526))       
@@ -80,6 +79,7 @@ class ScenarioManager():
         npcC_wp5 = carla.Transform(carla.Location(x=-35.999172, y=49.358360, z=0.540000), carla.Rotation(yaw=141.751526))
   
         self.npcC_wp = [npcC_wp1,npcC_wp2,npcC_wp3,npcC_wp4,npcC_wp5]
+        self.npcC_wpCount = len(self.npcC_wp)
 
         # for wp in self.npcA_wp:
         #     self.client.get_world().debug.draw_string(wp.location, 'O', draw_shadow=False,
@@ -97,7 +97,7 @@ class ScenarioManager():
 
     def executeScenario(self, ego_transform, start_time):
         
-        (obs_npc1, obs_npc2, obs_ped1, obs_npc3, obs_ped2, obs_cones, obs_npc4, obs_npc5, obs_npc6, obs_ped3, obs_ped4, obs_npcA, obs_npcB, obs_npcC, obs_npcD) = self.actorList
+        (obs_npcA, obs_npcB, obs_npcC, obs_npcD) = self.actorList
         
         elapsed_time = time.perf_counter() - start_time
         

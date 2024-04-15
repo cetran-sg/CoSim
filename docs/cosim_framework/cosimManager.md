@@ -6,7 +6,6 @@ The CoSim Manager is responsible for managing the simulation, calling the variou
 
 A high-level architecture is shown here.
 
-
 Here we list the identifier of the functions/class we commented
 
 ## cosimManager.py

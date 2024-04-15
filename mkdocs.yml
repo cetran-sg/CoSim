@@ -1,6 +1,9 @@
 site_name: CoSim - CETRAN open-source Simulation framework
-
+repo_url: https://github.com/cetran-sg/CoSim
+repo_name: cetran-sg/CoSim
 theme:
+  icon:
+    repo: fontawesome/brands/github
   name: material
   highlightjs: true
   hljs_languages:
@@ -8,11 +11,14 @@ theme:
   features:
     - navigation.path
     - navigation.footer
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
     - search.suggest
     - search.highlight
   custom_dir: docs/overrides
 
-copyright: Copyright &copy; 2024  Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
+copyright: Copyright &copy; 2024 Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
 extra:
   generator: false
 
@@ -28,6 +34,7 @@ nav:
   - 'Bridge server': 'cosim_framework/bridgeServer.md'
 
 plugins:
+  - git-authors
   - mkdocstrings:
       default_handler: python
       handlers:

@@ -1,13 +1,9 @@
 # Objects here are initialized and their functions called from cosimManager.py #
-
+import config as CONFIG
 
 HOST = CONFIG.APOLLO_HOST
 PORT = CONFIG.APOLLO_PORT
 
-import pprint
-import time
-import datetime
-import os
 import sys
 import socket
 import numpy as np
@@ -20,9 +16,8 @@ import netstruct
 # Module containing the encoder functions to generate and serialize the protoBuf messages for Apollo
 from apolloEncode import *
 
-# Control Command message type to decode the received binary message and read from Prescan
-#from protoLib.control_cmd_pb2 import ControlCommand
-# The publisher class containing member functions and variables to send data from Prescan to Apollo
+# Control command message type, to be decoded from Apollo and written into Carla
+from modules.common_msgs.control_msgs.control_cmd_pb2 import ControlCommand
 
 class BridgeClient():
     def __init__(self,hostIP,hostPort,msgString,delay = None,nextMsgTime = None):
@@ -58,9 +53,9 @@ class BridgeClient():
         """ When a message is sent, determines the timestamp of the next message and wheter to skip frames in case of excessive accumulation
 
         Args:
-            now float: current timestamp
-            prevMsg float: expected time of the previous msg
-            delay float : the expected delay of this message stream
+            now float: Current timestamp
+            prevMsg float: Expected time of the previous message
+            delay float : Expected delay of this message stream
         Returns:
 
         """
@@ -142,8 +137,8 @@ class ApolloBridgeClient_ActorGTPublisher(BridgeClient):
         """Generic Bridge Client
 
         Args:
-            hostIP string: The IP of the ads host (server)
-            hostPort int: The port of the ads host (server)
+            hostIP string: The IP of the ADS host (server)
+            hostPort int: The port of the ADS host (server)
         """
         delays = 0.1
         lastMsgTime = 0
@@ -185,15 +180,17 @@ class ApolloBridgeClient_EgoPublisher(BridgeClient):
         """Generic Bridge Client
 
         Args:
-            hostIP string: The IP of the ads host (server)
-            hostPort int: The port of the ads host (server)
+            hostIP string: The IP of the ADS host (server)
+            hostPort int: The port of the ADS host (server)
         """
         delays = {'Gps':0.1, 'IMU':0.01, 'cIMU':0.01, 'BP':0.01, 'INS':0.01, 'Cha':0.01, 'Hea':0.01, 'Pos':0.01 , 'Tf':0.01 }
         nextMsgTime = {'Gps':0.0, 'IMU':0.0, 'cIMU':0.0, 'BP':0.0, 'INS':0.0, 'Cha':0.0, 'Hea':0.0, 'Pos':0.0 , 'Tf':0.0 }
         super().__init__(hostIP,hostPort,b'EgoPub',delays,nextMsgTime)
         
     def sendEgoData(self, dataList):
-        """ Function to send ego vehicle localization and other data to the ADS
+        """ Function to send ego vehicle localization and other data to the ADS.
+        Some of the localization messages are not sent, as specified by the 'enableLocMsgs' flag.
+        This is because Apollo does not need all the localization messages to drive.
         
         Args:
             dataList tuple : Contains all parameters regarding the ego in the simulation frame
@@ -350,4 +347,3 @@ class ApolloBridgeClient_Subscriber(BridgeClient):
         ccmsg.ParseFromString(binMsg)
         #gear_location = ccmsg.gear_location
         return [ccmsg.throttle, ccmsg.brake, ccmsg.steering_target, ccmsg.steering_rate]
-    
