@@ -1,10 +1,10 @@
 # CoSim
 
-### CETRAN Open-Source Simulation framework
+## CETRAN Open-Source Simulation framework
 
 This repository contains code for the CoSim framework. The CoSim framework is a reference simulation framework for the virtual testing of autonomous (automated) vehicles built on top of the [Carla simulator](https://github.com/carla-simulator/carla). It also includes a reference bridge to [Baidu Apollo 8.0](https://github.com/ApolloAuto/apollo/tree/r8.0.0).
 
-## Project layout
+### Project layout
 
     mkdocs.yml    # The configuration file.
     docs/
@@ -28,5 +28,19 @@ This repository contains code for the CoSim framework. The CoSim framework is a 
             sensorConfig.py                 # File containing configuration parameters pertaining to the sensor setup of the ego vehicle
 
 To get started, take a look at the [code documentation](https://cetran-sg.github.io/CoSim/).
+
+## License
+
+CoSim has been provided under the [Apache 2.0 license](https://github.com/cetran-sg/CoSim/blob/main/LICENSE.txt).
+
+## Disclaimer
+
+This repository and the code within is intended only as a reference for virtual simulation-based autonomous vehicle (AV) testing and related implementations/processes.
+
+## Connect with us
+
+- [Questions, suggestions, improvements or other issues?](https://github.com/cetran-sg/CoSim/issues)
+- [CETRAN](https://cetran.sg/) - Centre of Excellence for Testing & Research of Autonomous Vehicles - NTU
+- [NTU](https://www.ntu.edu.sg/) - Nanyang Technological University, Singapore
 
 This repository has been developed and is maintained by [CETRAN](https://cetran.sg/).
