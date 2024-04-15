@@ -1,6 +1,6 @@
 # CoSim
 
-#### CETRAN Open-Source Simulation framework
+### CETRAN Open-Source Simulation framework
 
 This repository contains code for the CoSim framework.
 
