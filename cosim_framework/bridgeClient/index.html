@@ -9,18 +9,18 @@
       
       
       
-        <link rel="prev" href="../../getting_started/mapCreation/">
+        <link rel="prev" href="../cosimManager/">
       
       
         <link rel="next" href="../bridgeServer/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>Bridge client - CoSIM - CETRAN open-source SIMulation framework</title>
+        <title>Bridge client - CoSim - CETRAN open-source Simulation framework</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="CoSIM - CETRAN open-source SIMulation framework" class="md-header__button md-logo" aria-label="CoSIM - CETRAN open-source SIMulation framework" data-md-component="logo">
+    <a href="../.." title="CoSim - CETRAN open-source Simulation framework" class="md-header__button md-logo" aria-label="CoSim - CETRAN open-source Simulation framework" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CoSIM - CETRAN open-source SIMulation framework
+            CoSim - CETRAN open-source Simulation framework
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -168,6 +168,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/cetran-sg/CoSim" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cetran-sg/CoSim
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -193,14 +205,26 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="CoSIM - CETRAN open-source SIMulation framework" class="md-nav__button md-logo" aria-label="CoSIM - CETRAN open-source SIMulation framework" data-md-component="logo">
+    <a href="../.." title="CoSim - CETRAN open-source Simulation framework" class="md-nav__button md-logo" aria-label="CoSim - CETRAN open-source Simulation framework" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    CoSIM - CETRAN open-source SIMulation framework
+    CoSim - CETRAN open-source Simulation framework
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cetran-sg/CoSim" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cetran-sg/CoSim
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -215,7 +239,7 @@
         
   
   <span class="md-ellipsis">
-    CoSIM Documentation
+    CoSim Documentation
   </span>
   
 
@@ -238,7 +262,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -331,7 +357,7 @@
             
   
   <span class="md-ellipsis">
-    CoSIM framework
+    CoSim framework
   </span>
   
 
@@ -341,9 +367,51 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            CoSIM framework
+            CoSim framework
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cosimManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CoSim Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -398,16 +466,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient" class="md-nav__link">
+  <a href="#bridgeclientpy" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ApolloBridgeClient
+      bridgeClient.py
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;bridgeClient
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_ActorGTPublisher
     </span>
@@ -417,7 +494,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendActorGroundTruth
     </span>
@@ -426,7 +503,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendSensorData
     </span>
@@ -440,7 +517,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_EgoPublisher
     </span>
@@ -450,7 +527,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendEgoData
     </span>
@@ -464,7 +541,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_ImgPublisher
     </span>
@@ -474,7 +551,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendImgData
     </span>
@@ -483,7 +560,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendcImgData
     </span>
@@ -497,7 +574,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_PCPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_PCPublisher
     </span>
@@ -507,7 +584,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendPCData
     </span>
@@ -521,16 +598,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_Subscriber" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_Subscriber" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_Subscriber
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" ApolloBridgeClient_Subscriber">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_Subscriber.decodeSimData" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;decodeSimData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;BridgeClient
     </span>
@@ -540,7 +632,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.closeConnection" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.closeConnection" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;closeConnection
     </span>
@@ -549,7 +641,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.computeNextMsgTime" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.computeNextMsgTime" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;computeNextMsgTime
     </span>
@@ -558,7 +650,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.connectToServer" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.connectToServer" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;connectToServer
     </span>
@@ -567,7 +659,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.decodeSimData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.decodeSimData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;decodeSimData
     </span>
@@ -576,7 +668,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvMsg" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.recvMsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvMsg
     </span>
@@ -585,7 +677,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvSimData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.recvSimData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvSimData
     </span>
@@ -594,16 +686,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvall" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvall
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.register" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.register" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;register
     </span>
@@ -612,7 +695,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.sendBinMsg" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.sendBinMsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendBinMsg
     </span>
@@ -626,25 +709,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser" class="md-nav__link">
+  <a href="#apolloencodepy" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ApolloBridgeClient_Parser
+      apolloEncode.py
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.currentTime" class="md-nav__link">
+  <a href="#src.sim.apolloEncode" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;currentTime
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;apolloEncode
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.ConvertPoints" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.ConvertPoints" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ConvertPoints
     </span>
@@ -653,7 +736,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_BPmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_BPmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_BPmsgs
     </span>
@@ -662,7 +745,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Chamsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Chamsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Chamsgs
     </span>
@@ -671,7 +754,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_CompressedIMG" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_CompressedIMG" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_CompressedIMG
     </span>
@@ -680,7 +763,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_GPSmsg" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_GPSmsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_GPSmsg
     </span>
@@ -689,7 +772,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Heamsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Heamsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Heamsgs
     </span>
@@ -698,7 +781,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_IMG" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_IMG" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_IMG
     </span>
@@ -707,7 +790,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_IMUmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_IMUmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_IMUmsgs
     </span>
@@ -716,7 +799,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_INSmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_INSmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_INSmsgs
     </span>
@@ -725,7 +808,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_PC" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_PC" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_PC
     </span>
@@ -734,7 +817,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_POmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_POmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_POmsgs
     </span>
@@ -743,7 +826,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Posemsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Posemsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Posemsgs
     </span>
@@ -752,7 +835,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Tfmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Tfmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Tfmsgs
     </span>
@@ -761,7 +844,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_corrIMUmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_corrIMUmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_corrIMUmsgs
     </span>
@@ -790,27 +873,6 @@
   
   <span class="md-ellipsis">
     Bridge server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scenarioFramework/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scenario framework
   </span>
   
 
@@ -854,16 +916,25 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient" class="md-nav__link">
+  <a href="#bridgeclientpy" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ApolloBridgeClient
+      bridgeClient.py
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;bridgeClient
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_ActorGTPublisher
     </span>
@@ -873,7 +944,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendActorGroundTruth
     </span>
@@ -882,7 +953,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendSensorData
     </span>
@@ -896,7 +967,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_EgoPublisher
     </span>
@@ -906,7 +977,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendEgoData
     </span>
@@ -920,7 +991,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_ImgPublisher
     </span>
@@ -930,7 +1001,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendImgData
     </span>
@@ -939,7 +1010,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendcImgData
     </span>
@@ -953,7 +1024,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_PCPublisher" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_PCPublisher
     </span>
@@ -963,7 +1034,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendPCData
     </span>
@@ -977,16 +1048,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.ApolloBridgeClient_Subscriber" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_Subscriber" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ApolloBridgeClient_Subscriber
     </span>
   </a>
   
+    <nav class="md-nav" aria-label=" ApolloBridgeClient_Subscriber">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.sim.bridgeClient.ApolloBridgeClient_Subscriber.decodeSimData" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;decodeSimData
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;BridgeClient
     </span>
@@ -996,7 +1082,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.closeConnection" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.closeConnection" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;closeConnection
     </span>
@@ -1005,7 +1091,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.computeNextMsgTime" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.computeNextMsgTime" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;computeNextMsgTime
     </span>
@@ -1014,7 +1100,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.connectToServer" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.connectToServer" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;connectToServer
     </span>
@@ -1023,7 +1109,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.decodeSimData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.decodeSimData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;decodeSimData
     </span>
@@ -1032,7 +1118,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvMsg" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.recvMsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvMsg
     </span>
@@ -1041,7 +1127,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvSimData" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.recvSimData" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvSimData
     </span>
@@ -1050,16 +1136,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.recvall" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;recvall
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.register" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.register" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;register
     </span>
@@ -1068,7 +1145,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient.BridgeClient.sendBinMsg" class="md-nav__link">
+  <a href="#src.sim.bridgeClient.BridgeClient.sendBinMsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;sendBinMsg
     </span>
@@ -1082,25 +1159,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser" class="md-nav__link">
+  <a href="#apolloencodepy" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ApolloBridgeClient_Parser
+      apolloEncode.py
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.currentTime" class="md-nav__link">
+  <a href="#src.sim.apolloEncode" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;currentTime
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;apolloEncode
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.ConvertPoints" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.ConvertPoints" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ConvertPoints
     </span>
@@ -1109,7 +1186,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_BPmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_BPmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_BPmsgs
     </span>
@@ -1118,7 +1195,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Chamsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Chamsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Chamsgs
     </span>
@@ -1127,7 +1204,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_CompressedIMG" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_CompressedIMG" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_CompressedIMG
     </span>
@@ -1136,7 +1213,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_GPSmsg" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_GPSmsg" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_GPSmsg
     </span>
@@ -1145,7 +1222,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Heamsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Heamsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Heamsgs
     </span>
@@ -1154,7 +1231,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_IMG" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_IMG" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_IMG
     </span>
@@ -1163,7 +1240,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_IMUmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_IMUmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_IMUmsgs
     </span>
@@ -1172,7 +1249,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_INSmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_INSmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_INSmsgs
     </span>
@@ -1181,7 +1258,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_PC" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_PC" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_PC
     </span>
@@ -1190,7 +1267,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_POmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_POmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_POmsgs
     </span>
@@ -1199,7 +1276,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Posemsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Posemsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Posemsgs
     </span>
@@ -1208,7 +1285,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_Tfmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_Tfmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_Tfmsgs
     </span>
@@ -1217,7 +1294,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.sim.ApolloBridgeClient_Parser.encode_corrIMUmsgs" class="md-nav__link">
+  <a href="#src.sim.apolloEncode.encode_corrIMUmsgs" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;encode_corrIMUmsgs
     </span>
@@ -1247,16 +1324,21 @@
 
                   
 
+  
+  
+
 
 <h1 id="bridge-client">Bridge Client</h1>
-<p>Here we list the identifier of the functions/class we commented</p>
+<p>The bridge client gets information about the simulation world, actors and the ego vehicle from the Carla simulation server. It also receives the control commands as supplied by the ADS (Automated Driving System) and applies it to the simulated ego vehicle.</p>
+<p>The bridge client consists of two files, bridgeClient.py and apolloEncode.py. The former handles communication with the bridge server and the latter handles encoding of messages into formats compatible with the Baidu Apollo ADS.</p>
+<h2 id="bridgeclientpy">bridgeClient.py</h2>
 
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="src.sim.ApolloBridgeClient"></a>
+<a id="src.sim.bridgeClient"></a>
   <div class="doc doc-contents first">
 
   
@@ -1274,15 +1356,246 @@
 
 
 
-<h2 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
+<h2 id="src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.ApolloBridgeClient.BridgeClient" href="../../getting_started/bridgeClient/#src.sim.ApolloBridgeClient.BridgeClient">BridgeClient</a></code></p>
+            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.bridgeClient.BridgeClient" href="#src.sim.bridgeClient.BridgeClient">BridgeClient</a></code></p>
+
+  
+      <p>Generic Bridge Client</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hostIP</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>The IP of the ADS host (server)</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hostPort</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>The port of the ADS host (server)</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="o">.</span><span class="n">sendActorGroundTruth</span><span class="p">(</span><span class="n">dataList</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Function to send actor ground truth data from the simulator </p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dataList</code></b>
+            (<code>tuple</code>)
+        –
+        <div class="doc-md-description">
+          <p>Contains all parameters regarding actors in the simulation frame</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="o">.</span><span class="n">sendSensorData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Wrapper function to send sensor data using the netstruct protocol</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>data</code></b>
+            (<code>bytestring</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sensor data as a bytestring</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>type</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>String specifying type of sensor data</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_EgoPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.bridgeClient.BridgeClient" href="#src.sim.bridgeClient.BridgeClient">BridgeClient</a></code></p>
+
+  
+      <p>Generic Bridge Client</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>hostIP</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>The IP of the ADS host (server)</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>hostPort</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>The port of the ADS host (server)</p>
+        </div>
+      </li>
+  </ul>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_EgoPublisher</span><span class="o">.</span><span class="n">sendEgoData</span><span class="p">(</span><span class="n">dataList</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Function to send ego vehicle localization and other data to the ADS.
+Some of the localization messages are not sent, as specified by the 'enableLocMsgs' flag.
+This is because Apollo does not need all the localization messages to drive.</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>dataList</code></b>
+            (<code>tuple</code>)
+        –
+        <div class="doc-md-description">
+          <p>Contains all parameters regarding the ego in the simulation frame</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.bridgeClient.BridgeClient" href="#src.sim.bridgeClient.BridgeClient">BridgeClient</a></code></p>
 
   
       <p>Generic Bridge Client</p>
@@ -1327,16 +1640,28 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendActorGroundTruth" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="o">.</span><span class="n">sendActorGroundTruth</span><span class="p">(</span><span class="n">dataList</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="o">.</span><span class="n">sendImgData</span><span class="p">(</span><span class="n">imgData</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Function to send image data from simulator to ADS</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>imgData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Image data from the simulator</p>
+        </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -1347,16 +1672,28 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ActorGTPublisher.sendSensorData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ActorGTPublisher</span><span class="o">.</span><span class="n">sendSensorData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="o">.</span><span class="n">sendcImgData</span><span class="p">(</span><span class="n">cimgData</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Function to send compressed image data from simulator to ADS</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>cimgData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Compressed image data from the simulator</p>
+        </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -1375,15 +1712,15 @@
 
 
 
-<h2 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_EgoPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
+<h2 id="src.sim.bridgeClient.ApolloBridgeClient_PCPublisher" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_PCPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.ApolloBridgeClient.BridgeClient" href="../../getting_started/bridgeClient/#src.sim.ApolloBridgeClient.BridgeClient">BridgeClient</a></code></p>
+            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.bridgeClient.BridgeClient" href="#src.sim.bridgeClient.BridgeClient">BridgeClient</a></code></p>
 
   
       <p>Generic Bridge Client</p>
@@ -1428,16 +1765,28 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_EgoPublisher.sendEgoData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_EgoPublisher</span><span class="o">.</span><span class="n">sendEgoData</span><span class="p">(</span><span class="n">dataList</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_PCPublisher</span><span class="o">.</span><span class="n">sendPCData</span><span class="p">(</span><span class="n">PCData</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Function to send pointcloud data from simulator to ADS</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>cimgData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Compressed image data from the simulator</p>
+        </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -1456,15 +1805,15 @@
 
 
 
-<h2 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
+<h2 id="src.sim.bridgeClient.ApolloBridgeClient_Subscriber" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_Subscriber</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.ApolloBridgeClient.BridgeClient" href="../../getting_started/bridgeClient/#src.sim.ApolloBridgeClient.BridgeClient">BridgeClient</a></code></p>
+            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.bridgeClient.BridgeClient" href="#src.sim.bridgeClient.BridgeClient">BridgeClient</a></code></p>
 
   
       <p>Generic Bridge Client</p>
@@ -1509,117 +1858,29 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendImgData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="o">.</span><span class="n">sendImgData</span><span class="p">(</span><span class="n">imgData</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.ApolloBridgeClient_Subscriber.decodeSimData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_Subscriber</span><span class="o">.</span><span class="n">decodeSimData</span><span class="p">(</span><span class="n">binMsg</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_ImgPublisher.sendcImgData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_ImgPublisher</span><span class="o">.</span><span class="n">sendcImgData</span><span class="p">(</span><span class="n">cimgData</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Args:</p>
-<p>Returns:</p>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_PCPublisher</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.ApolloBridgeClient.BridgeClient" href="../../getting_started/bridgeClient/#src.sim.ApolloBridgeClient.BridgeClient">BridgeClient</a></code></p>
-
-  
-      <p>Generic Bridge Client</p>
+      <p>Function to decode the control command data received from the ADS</p>
 
 
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
-        <b><code>hostIP</code></b>
-            (<code>string</code>)
+        <b><code>binMsg</code></b>
+            (<code>bytestring</code>)
         –
         <div class="doc-md-description">
-          <p>The IP of the ads host (server)</p>
-        </div>
-      </li>
-      <li class="field-body">
-        <b><code>hostPort</code></b>
-            (<code>int</code>)
-        –
-        <div class="doc-md-description">
-          <p>The port of the ads host (server)</p>
+          <p>Binary message from the ADS to be decoded</p>
         </div>
       </li>
   </ul>
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_PCPublisher.sendPCData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_PCPublisher</span><span class="o">.</span><span class="n">sendPCData</span><span class="p">(</span><span class="n">PCData</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Args:</p>
-<p>Returns:</p>
 
   </div>
 
@@ -1638,69 +1899,8 @@
 
 
 
-<h2 id="src.sim.ApolloBridgeClient.ApolloBridgeClient_Subscriber" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">ApolloBridgeClient_Subscriber</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">)</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="src.sim.ApolloBridgeClient.BridgeClient" href="../../getting_started/bridgeClient/#src.sim.ApolloBridgeClient.BridgeClient">BridgeClient</a></code></p>
-
-  
-      <p>Generic Bridge Client</p>
-
-
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b><code>hostIP</code></b>
-            (<code>string</code>)
-        –
-        <div class="doc-md-description">
-          <p>The IP of the ads host (server)</p>
-        </div>
-      </li>
-      <li class="field-body">
-        <b><code>hostPort</code></b>
-            (<code>int</code>)
-        –
-        <div class="doc-md-description">
-          <p>The port of the ads host (server)</p>
-        </div>
-      </li>
-  </ul>
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  </div>
-
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="src.sim.ApolloBridgeClient.BridgeClient" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">,</span> <span class="n">msgString</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nextMsgTime</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<h2 id="src.sim.bridgeClient.BridgeClient" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="p">(</span><span class="n">hostIP</span><span class="p">,</span> <span class="n">hostPort</span><span class="p">,</span> <span class="n">msgString</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nextMsgTime</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
@@ -1778,8 +1978,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.closeConnection" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">closeConnection</span><span class="p">()</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.closeConnection" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">closeConnection</span><span class="p">()</span></code>
 
 </h3>
 
@@ -1797,8 +1997,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.computeNextMsgTime" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">computeNextMsgTime</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">prevMsg</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.computeNextMsgTime" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">computeNextMsgTime</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="n">prevMsg</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1816,7 +2016,7 @@
             (<code>float</code>)
         –
         <div class="doc-md-description">
-          <p>current timestamp</p>
+          <p>Current timestamp</p>
         </div>
       </li>
       <li class="field-body">
@@ -1824,7 +2024,7 @@
             (<code>float</code>)
         –
         <div class="doc-md-description">
-          <p>expected time of the previous msg</p>
+          <p>Expected time of the previous message</p>
         </div>
       </li>
       <li class="field-body">
@@ -1832,7 +2032,7 @@
             (<code>float</code>)
         –
         <div class="doc-md-description">
-          <p>the expected delay of this message stream</p>
+          <p>Expected delay of this message stream</p>
         </div>
       </li>
   </ul>
@@ -1847,8 +2047,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.connectToServer" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">connectToServer</span><span class="p">()</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.connectToServer" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">connectToServer</span><span class="p">()</span></code>
 
 </h3>
 
@@ -1866,8 +2066,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.decodeSimData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">decodeSimData</span><span class="p">(</span><span class="n">binMsg</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.decodeSimData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">decodeSimData</span><span class="p">(</span><span class="n">binMsg</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1885,16 +2085,15 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.recvMsg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">recvMsg</span><span class="p">()</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.recvMsg" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">recvMsg</span><span class="p">()</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Netstruct function to receive message from apolloBridgeServer</p>
 
   </div>
 
@@ -1905,8 +2104,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.recvSimData" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">recvSimData</span><span class="p">()</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.recvSimData" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">recvSimData</span><span class="p">()</span></code>
 
 </h3>
 
@@ -1914,7 +2113,6 @@
   <div class="doc doc-contents ">
   
       <p>Function to receive messages from the server</p>
-<p>Args:</p>
 
 
 
@@ -1937,28 +2135,8 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.recvall" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">recvall</span><span class="p">(</span><span class="n">count</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Args:</p>
-<p>Returns:</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.register" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">register</span><span class="p">()</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.register" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">register</span><span class="p">()</span></code>
 
 </h3>
 
@@ -1966,8 +2144,6 @@
   <div class="doc doc-contents ">
   
       <p>Register a client object to the server</p>
-<p>Args:</p>
-<p>Returns:</p>
 
   </div>
 
@@ -1978,15 +2154,15 @@
 
 
 
-<h3 id="src.sim.ApolloBridgeClient.BridgeClient.sendBinMsg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">sendBinMsg</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">msgType</span><span class="p">)</span></code>
+<h3 id="src.sim.bridgeClient.BridgeClient.sendBinMsg" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">bridgeClient</span><span class="o">.</span><span class="n">BridgeClient</span><span class="o">.</span><span class="n">sendBinMsg</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">msgType</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
-      <p>Netstruct protocol function to send packaged data as binary</p>
+      <p>Netstruct protocol function to package and send binary data</p>
 
 
 
@@ -1994,13 +2170,21 @@
   <ul>
       <li class="field-body">
         <b><code>data</code></b>
+            (<code>bytestring</code>)
         –
         <div class="doc-md-description">
-          
+          <p>The data to send</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>msgType</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>Message type</p>
         </div>
       </li>
   </ul>
-      <p>Returns:</p>
 
   </div>
 
@@ -2022,13 +2206,14 @@
 
   </div>
 
-</div>
+</div><h2 id="apolloencodepy">apolloEncode.py</h2>
+
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="src.sim.ApolloBridgeClient_Parser"></a>
+<a id="src.sim.apolloEncode"></a>
   <div class="doc doc-contents first">
 
   
@@ -2041,29 +2226,6 @@
 
 
 
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="src.sim.ApolloBridgeClient_Parser.currentTime" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">currentTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>The Carla and Apollo maps are generated from Mathworks RoadRunner.
-Carla coordinate system is the same as the exported map coordinates except with -y
-Apollo map has a very large offset which is mentioned below and is applied to the localization messages</p>
-  </div>
-
-</div>
-
 
 
 
@@ -2071,36 +2233,48 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.ConvertPoints" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">ConvertPoints</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.ConvertPoints" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">ConvertPoints</span><span class="p">(</span><span class="n">carlaPoint</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
+      <p>Convert Carla points from the pointcloud to the Protobuf PointXYZIT format</p>
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_BPmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_BPmsgs</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>carlaPoint</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Point from each Carla pointcloud frame</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+  </ul>
 
-</h2>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Args:</p>
-<p>Returns:</p>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Point in the PointXYZIT format</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2111,16 +2285,81 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_Chamsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_Chamsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">odo</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">throttle</span><span class="p">,</span> <span class="n">brake</span><span class="p">,</span> <span class="n">steering</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_BPmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_BPmsgs</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle Best Pose data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>lat</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Latitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>lon</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Longitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Best Pose message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2131,18 +2370,121 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_CompressedIMG" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_CompressedIMG</span><span class="p">(</span><span class="n">imgData</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_Chamsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_Chamsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">odo</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">throttle</span><span class="p">,</span> <span class="n">brake</span><span class="p">,</span> <span class="n">steering</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <pre><code>
-</code></pre>
-<p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle chassis data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>lat</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Latitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>lon</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Longitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>odo</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Odometer reading</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>heading</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>vel</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Absolute velocity</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>throttle</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Throttle percentage</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>brake</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Brake percentage</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>steering</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Steering angle</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Chassis message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2153,16 +2495,48 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_GPSmsg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_GPSmsg</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">qw</span><span class="p">,</span> <span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">,</span> <span class="n">qz</span><span class="p">,</span> <span class="n">velx</span><span class="p">,</span> <span class="n">vely</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_CompressedIMG" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_CompressedIMG</span><span class="p">(</span><span class="n">imgData</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize compressed camera images from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>imgData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Image data from the simulator</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Compressed image data as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2173,16 +2547,137 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_Heamsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_Heamsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">,</span> <span class="n">heading</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_GPSmsg" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_GPSmsg</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">qw</span><span class="p">,</span> <span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">,</span> <span class="n">qz</span><span class="p">,</span> <span class="n">velx</span><span class="p">,</span> <span class="n">vely</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle GPS data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>lat</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Latitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>lon</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Longitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qw</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion W</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion X</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion Y</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qz</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion Z</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>velx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity in X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>vely</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity in Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>heading</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>GPS message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2193,18 +2688,57 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_IMG" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_IMG</span><span class="p">(</span><span class="n">imgData</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_Heamsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_Heamsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">,</span> <span class="n">heading</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <pre><code>
-</code></pre>
-<p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle heading from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>heading</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Heading message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2215,16 +2749,48 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_IMUmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_IMUmsgs</span><span class="p">(</span><span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_IMG" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_IMG</span><span class="p">(</span><span class="n">imgData</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize camera images from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>imgData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Image data from the simulator</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Image data as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2235,18 +2801,97 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_INSmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_INSmsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_IMUmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_IMUmsgs</span><span class="p">(</span><span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <pre><code>
-</code></pre>
-<p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle IMU data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>avelX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>IMU message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2257,18 +2902,49 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_PC" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_PC</span><span class="p">(</span><span class="n">sampleData</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_INSmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_INSmsgs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <pre><code>
-</code></pre>
-<p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle INS data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>INS message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2279,16 +2955,48 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_POmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_POmsgs</span><span class="p">(</span><span class="n">objCount</span><span class="p">,</span> <span class="n">objIDs</span><span class="p">,</span> <span class="n">objType</span><span class="p">,</span> <span class="n">objHeadings</span><span class="p">,</span> <span class="n">objLats</span><span class="p">,</span> <span class="n">objLons</span><span class="p">,</span> <span class="n">objutmx</span><span class="p">,</span> <span class="n">objutmy</span><span class="p">,</span> <span class="n">objVelXs</span><span class="p">,</span> <span class="n">objVelYs</span><span class="p">,</span> <span class="n">objBBxs</span><span class="p">,</span> <span class="n">objBBys</span><span class="p">,</span> <span class="n">objBBzs</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_PC" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_PC</span><span class="p">(</span><span class="n">pcData</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize LiDAR pointcloud from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>pcData</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Pointcloud data from the simulator</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Pointcloud message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2299,16 +3007,143 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_Posemsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_Posemsgs</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">qw</span><span class="p">,</span> <span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">,</span> <span class="n">qz</span><span class="p">,</span> <span class="n">velx</span><span class="p">,</span> <span class="n">vely</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_POmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_POmsgs</span><span class="p">(</span><span class="n">objCount</span><span class="p">,</span> <span class="n">objIDs</span><span class="p">,</span> <span class="n">objType</span><span class="p">,</span> <span class="n">objHeadings</span><span class="p">,</span> <span class="n">objLats</span><span class="p">,</span> <span class="n">objLons</span><span class="p">,</span> <span class="n">objutmx</span><span class="p">,</span> <span class="n">objutmy</span><span class="p">,</span> <span class="n">objVelXs</span><span class="p">,</span> <span class="n">objVelYs</span><span class="p">,</span> <span class="n">objBBxs</span><span class="p">,</span> <span class="n">objBBys</span><span class="p">,</span> <span class="n">objBBzs</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize actor snapshot data from the simulator into Apollo's Perception Obstacle message</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>objCount</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Number of objects/obstacles in current simulation snapshot</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objIDs</code></b>
+            (<code>list</code>)
+        –
+        <div class="doc-md-description">
+          <p>Unique identifier assigned to each object/obstacle</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objType</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>Type of object (vehicle, pedestrian, cones etc.)</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objHeadings</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading of each object</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objLats</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Latitude of each object</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objLons</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Longitude of each object</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objutmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate of each object</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objutmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate of each object</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objVelXs</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity of each object in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objVelYs</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity of each object in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objBBxs</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Bounding box dimension of each object in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objBBys</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Bounding box dimension of each object in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>objBBzs</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Bounding box dimension of each object in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+      <p>Returns:
+    Perception Obstacles message as a bytestring</p>
 
   </div>
 
@@ -2319,16 +3154,185 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_Tfmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_Tfmsgs</span><span class="p">(</span><span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">eulx</span><span class="p">,</span> <span class="n">euly</span><span class="p">,</span> <span class="n">eulz</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_Posemsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_Posemsgs</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">qw</span><span class="p">,</span> <span class="n">qx</span><span class="p">,</span> <span class="n">qy</span><span class="p">,</span> <span class="n">qz</span><span class="p">,</span> <span class="n">velx</span><span class="p">,</span> <span class="n">vely</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle pose from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>lat</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Latitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>lon</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Longitude</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qw</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion W</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion X</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion Y</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>qz</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Quaternion Z</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>velx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity in X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>vely</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Velocity in Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>heading</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Pose message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2339,16 +3343,214 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 
 
 
-<h2 id="src.sim.ApolloBridgeClient_Parser.encode_corrIMUmsgs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">ApolloBridgeClient_Parser</span><span class="o">.</span><span class="n">encode_corrIMUmsgs</span><span class="p">(</span><span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">eulX</span><span class="p">,</span> <span class="n">eulY</span><span class="p">,</span> <span class="n">eulZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+<h2 id="src.sim.apolloEncode.encode_Tfmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_Tfmsgs</span><span class="p">(</span><span class="n">utmx</span><span class="p">,</span> <span class="n">utmy</span><span class="p">,</span> <span class="n">eulx</span><span class="p">,</span> <span class="n">euly</span><span class="p">,</span> <span class="n">eulz</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Args:</p>
-<p>Returns:</p>
+      <p>Package and serialize ego vehicle transform from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>utmx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM X-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>utmy</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>UTM Y-coordinate</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>eulx</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>euly</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>eulz</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>seq</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Sequence number</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Transform message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.sim.apolloEncode.encode_corrIMUmsgs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">apolloEncode</span><span class="o">.</span><span class="n">encode_corrIMUmsgs</span><span class="p">(</span><span class="n">avelX</span><span class="p">,</span> <span class="n">avelY</span><span class="p">,</span> <span class="n">avelZ</span><span class="p">,</span> <span class="n">eulX</span><span class="p">,</span> <span class="n">eulY</span><span class="p">,</span> <span class="n">eulZ</span><span class="p">,</span> <span class="n">accX</span><span class="p">,</span> <span class="n">accY</span><span class="p">,</span> <span class="n">accZ</span><span class="p">,</span> <span class="n">heading</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Package and serialize ego vehicle Corrected IMU data from the simulator to Apollo's format</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>avelX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>avelZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Angular velocity in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>eulX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>eulY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>eulZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Euler angle in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accX</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the X-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accY</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the Y-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>accZ</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Acceleration in the Z-axis</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>heading</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Heading (yaw)</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>t</code></b>
+            (<code>float</code>)
+        –
+        <div class="doc-md-description">
+          <p>Timestamp</p>
+        </div>
+      </li>
+  </ul>
+
+
+
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+        –
+        <div class="doc-md-description">
+          <p>Corrected IMU message as a bytestring</p>
+      </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -2382,6 +3584,12 @@ Apollo map has a very large offset which is mentioned below and is applied to th
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -2391,7 +3599,7 @@ Apollo map has a very large offset which is mentioned below and is applied to th
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../getting_started/mapCreation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Map creation workflow">
+          <a href="../cosimManager/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CoSim Manager">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2401,7 +3609,7 @@ Apollo map has a very large offset which is mentioned below and is applied to th
                 Previous
               </span>
               <div class="md-ellipsis">
-                Map creation workflow
+                CoSim Manager
               </div>
             </div>
           </a>
@@ -2431,7 +3639,7 @@ Apollo map has a very large offset which is mentioned below and is applied to th
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024  Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
+      Copyright &copy; 2024 Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
     </div>
   
   
@@ -2447,10 +3655,10 @@ Apollo map has a very large offset which is mentioned below and is applied to th
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.footer", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.footer", "navigation.instant", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

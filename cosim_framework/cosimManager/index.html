@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../bridgeClient/">
+        <link rel="prev" href="../prerequisites/">
       
+      
+        <link rel="next" href="../bridgeClient/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Bridge server - CoSim - CETRAN open-source Simulation framework</title>
+        <title>CoSim Manager - CoSim - CETRAN open-source Simulation framework</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bridge-server" class="md-skip">
+        <a href="#cosim-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bridge server
+              CoSim Manager
             
           </span>
         </div>
@@ -394,10 +396,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../cosimManager/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CoSim Manager
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -406,6 +428,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cosimmanagerpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      cosimManager.py
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cosimManager
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.ActorSnapshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ActorSnapshots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" ActorSnapshots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.ActorSnapshots.parseActorSnapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;parseActorSnapshot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.actorReader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;actorReader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.camReader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;camReader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.egoReader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;egoReader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.egoWriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;egoWriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.lidarReader" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lidarReader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.parseEgoSnapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;parseEgoSnapshot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.sim.cosimManager.scenarioPlayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;scenarioPlayer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -436,30 +583,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Bridge server
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bridgeServer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,206 +595,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#apollobridgeserverpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      apolloBridgeServer.py
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;apolloBridgeServer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.Server" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Server
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=" Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.Server.start" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;start
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.ccHandler" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ccHandler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.connHandler" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;connHandler
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cyberwriterpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      cyberWriter.py
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cyberWriter
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CyberWriter
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=" CyberWriter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter.makeWriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;makeWriter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter.writeMessage" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;writeMessage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cyberreaderpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      cyberReader.py
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.cyberReader" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cyberReader
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;cReader
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=" cReader">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.callback" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;callback
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.encodeBinMsg" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;encodeBinMsg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.makeReader" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;makeReader
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.readMsgList" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;readMsgList
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -707,37 +634,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apollobridgeserverpy" class="md-nav__link">
+  <a href="#cosimmanagerpy" class="md-nav__link">
     <span class="md-ellipsis">
-      apolloBridgeServer.py
+      cosimManager.py
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer" class="md-nav__link">
+  <a href="#src.sim.cosimManager" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;apolloBridgeServer
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cosimManager
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.Server" class="md-nav__link">
+  <a href="#src.sim.cosimManager.ActorSnapshots" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Server
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ActorSnapshots
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=" Server">
+    <nav class="md-nav" aria-label=" ActorSnapshots">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.Server.start" class="md-nav__link">
+  <a href="#src.sim.cosimManager.ActorSnapshots.parseActorSnapshot" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;start
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;parseActorSnapshot
     </span>
   </a>
   
@@ -749,140 +676,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.ccHandler" class="md-nav__link">
+  <a href="#src.sim.cosimManager.actorReader" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;ccHandler
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;actorReader
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.apolloBridgeServer.connHandler" class="md-nav__link">
+  <a href="#src.sim.cosimManager.camReader" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;connHandler
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;camReader
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cyberwriterpy" class="md-nav__link">
+  <a href="#src.sim.cosimManager.egoReader" class="md-nav__link">
     <span class="md-ellipsis">
-      cyberWriter.py
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;egoReader
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter" class="md-nav__link">
+  <a href="#src.sim.cosimManager.egoWriter" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cyberWriter
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;egoWriter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter" class="md-nav__link">
+  <a href="#src.sim.cosimManager.lidarReader" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CyberWriter
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=" CyberWriter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter.makeWriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;makeWriter
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberWriter.CyberWriter.writeMessage" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;writeMessage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cyberreaderpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      cyberReader.py
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;lidarReader
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.cyberReader" class="md-nav__link">
+  <a href="#src.sim.cosimManager.parseEgoSnapshot" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;cyberReader
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;parseEgoSnapshot
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader" class="md-nav__link">
+  <a href="#src.sim.cosimManager.scenarioPlayer" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;cReader
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;scenarioPlayer
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label=" cReader">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.callback" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;callback
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.encodeBinMsg" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;encodeBinMsg
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.makeReader" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;makeReader
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#src.ads.cyberReader.cReader.readMsgList" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;readMsgList
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -912,16 +764,19 @@
   
 
 
-<h1 id="bridge-server">Bridge Server</h1>
-<p>The bridge server for the reference Carla-Apollo bridge runs inside the Baidu Apollo Docker environment.</p>
-<h2 id="apollobridgeserverpy">apolloBridgeServer.py</h2>
+<h1 id="cosim-manager">CoSIM Manager</h1>
+<p>The CoSim Manager is responsible for managing the simulation, calling the various client scripts, passing them data and starting and stopping scenarios.</p>
+<p><img alt="Bridge client architecture" src="../bridge_client_architecture.svg" /></p>
+<p>A high-level architecture is shown here.</p>
+<p>Here we list the identifier of the functions/class we commented</p>
+<h2 id="cosimmanagerpy">cosimManager.py</h2>
 
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="src.ads.apolloBridgeServer"></a>
+<a id="src.sim.cosimManager"></a>
   <div class="doc doc-contents first">
 
   
@@ -939,96 +794,131 @@
 
 
 
-<h2 id="src.ads.apolloBridgeServer.Server" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">apolloBridgeServer</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span></code>
+<h2 id="src.sim.cosimManager.ActorSnapshots" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">ActorSnapshots</span><span class="p">()</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
 
+
+
   
-      <p>Main bridge server class file with host and port definitions</p>
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="src.sim.cosimManager.ActorSnapshots.parseActorSnapshot" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">ActorSnapshots</span><span class="o">.</span><span class="n">parseActorSnapshot</span><span class="p">(</span><span class="n">snap</span><span class="p">,</span> <span class="n">obsIDList</span><span class="p">,</span> <span class="n">actorList</span><span class="p">,</span> <span class="n">carlamap</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse the Carla snapshot to extract actor data. This is subsequently used to generate the actor ground truth message for the ADS.</p>
 
 
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
-        <b><code>host</code></b>
+        <b><code>snap</code></b>
+            (<code><span title="carla.Snapshot">Snapshot</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>Carla snapshot to be parsed</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>obsIDList</code></b>
+        –
+        <div class="doc-md-description">
+          <p>List of actor IDs to be included in the output</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>actorList</code></b>
+        –
+        <div class="doc-md-description">
+          <p>List of carla.actors used to retrieve static information</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>carlamap</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Carla world.map object used to get properties such as those for geolocation transformation</p>
+        </div>
+      </li>
+  </ul>
+      <p>Returns:
+    A tuple including all actor properties for each actor</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.sim.cosimManager.actorReader" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">actorReader</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Manager function to send actor data using the bridge</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>CARLA_HOST</code></b>
             (<code>string</code>)
         –
         <div class="doc-md-description">
-          <p>IP of the bridge server, typically '127.0.0.1' (but if Carla is running on another machine, give an IP on the same subnet)</p>
+          <p>Host IP of Carla server</p>
         </div>
       </li>
       <li class="field-body">
-        <b><code>port</code></b>
+        <b><code>CARLA_PORT</code></b>
             (<code>int</code>)
         –
         <div class="doc-md-description">
-          <p>Port of the bridge server, typically 9999</p>
+          <p>Port of Carla server</p>
         </div>
       </li>
   </ul>
 
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.ads.apolloBridgeServer.Server.start" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">apolloBridgeServer</span><span class="o">.</span><span class="n">Server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Start the server, accept connections from clients and assign them to handlers (each on a different process)</p>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-
-</div>
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="src.ads.apolloBridgeServer.ccHandler" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">apolloBridgeServer</span><span class="o">.</span><span class="n">ccHandler</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">prID</span><span class="p">)</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Handler for control command messages to be published to the simulator</p>
-
   </div>
 
 </div>
@@ -1038,156 +928,34 @@
 
 
 
-<h2 id="src.ads.apolloBridgeServer.connHandler" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">apolloBridgeServer</span><span class="o">.</span><span class="n">connHandler</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">prID</span><span class="p">,</span> <span class="n">initmsgType</span><span class="p">)</span></code>
+<h2 id="src.sim.cosimManager.camReader" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">camReader</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Connection handler for subscribed messages from the simulator</p>
-
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-</div><h2 id="cyberwriterpy">cyberWriter.py</h2>
-
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="src.ads.cyberWriter"></a>
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="src.ads.cyberWriter.CyberWriter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberWriter</span><span class="o">.</span><span class="n">CyberWriter</span><span class="p">(</span><span class="n">nodeName</span><span class="p">,</span> <span class="n">msgDict</span><span class="p">)</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-
-  
-      <p>Initialize CyberWriter object</p>
+      <p>Manager function to send camera on the bridge</p>
 
 
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
-        <b><code>nodeName</code></b>
+        <b><code>CARLA_HOST</code></b>
             (<code>string</code>)
         –
         <div class="doc-md-description">
-          <p>Name of the CyberRT node to write the message into</p>
+          <p>Host IP of Carla server</p>
         </div>
       </li>
       <li class="field-body">
-        <b><code>msgDict</code></b>
-            (<code>dict</code>)
-        –
-        <div class="doc-md-description">
-          <p>Dictionary containing the message channel and type of message</p>
-        </div>
-      </li>
-  </ul>
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.ads.cyberWriter.CyberWriter.makeWriter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberWriter</span><span class="o">.</span><span class="n">CyberWriter</span><span class="o">.</span><span class="n">makeWriter</span><span class="p">()</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Create a CyberRT node and create a writer to it</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.ads.cyberWriter.CyberWriter.writeMessage" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberWriter</span><span class="o">.</span><span class="n">CyberWriter</span><span class="o">.</span><span class="n">writeMessage</span><span class="p">(</span><span class="n">binMsg</span><span class="p">,</span> <span class="n">msgType</span><span class="p">,</span> <span class="n">msgLen</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Write the binary message into the CyberRT node using the previously created writer</p>
-
-
-
-  <p>Parameters:</p>
-  <ul>
-      <li class="field-body">
-        <b><code>binMsg</code></b>
-            (<code>bytestring</code>)
-        –
-        <div class="doc-md-description">
-          <p>Bytestring message received from the simulator</p>
-        </div>
-      </li>
-      <li class="field-body">
-        <b><code>msgType</code></b>
-        –
-        <div class="doc-md-description">
-          <p>Message type from the dictionary which stores all message channels and types</p>
-        </div>
-      </li>
-      <li class="field-body">
-        <b><code>msgLen</code></b>
+        <b><code>CARLA_PORT</code></b>
             (<code>int</code>)
         –
         <div class="doc-md-description">
-          <p>Length of the message</p>
+          <p>Port of Carla server</p>
         </div>
       </li>
   </ul>
@@ -1197,113 +965,38 @@
 </div>
 
 
-
-  </div>
-
-  </div>
-
-
-</div>
+<div class="doc doc-object doc-function">
 
 
 
-
-  </div>
-
-  </div>
-
-</div><h2 id="cyberreaderpy">cyberReader.py</h2>
-
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="src.ads.cyberReader"></a>
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="src.ads.cyberReader.cReader" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberReader</span><span class="o">.</span><span class="n">cReader</span><span class="p">()</span></code>
+<h2 id="src.sim.cosimManager.egoReader" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">egoReader</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
-
   
-      <p>Initialize CyberReader object</p>
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.ads.cyberReader.cReader.callback" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberReader</span><span class="o">.</span><span class="n">cReader</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Callback function to get control command messages from CyberRT</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="src.ads.cyberReader.cReader.encodeBinMsg" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberReader</span><span class="o">.</span><span class="n">cReader</span><span class="o">.</span><span class="n">encodeBinMsg</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Function to encode the control commands to binary for sending to the simulator</p>
+      <p>Manager function to send ego data on the bridge + more things TODO</p>
 
 
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
-        <b><code>msg</code></b>
+        <b><code>CARLA_HOST</code></b>
+            (<code>string</code>)
         –
         <div class="doc-md-description">
-          <p>Control command message</p>
+          <p>Host IP of Carla server</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>CARLA_PORT</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Port of Carla server</p>
         </div>
       </li>
   </ul>
@@ -1317,15 +1010,37 @@
 
 
 
-<h3 id="src.ads.cyberReader.cReader.makeReader" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberReader</span><span class="o">.</span><span class="n">cReader</span><span class="o">.</span><span class="n">makeReader</span><span class="p">()</span></code>
+<h2 id="src.sim.cosimManager.egoWriter" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">egoWriter</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
 
-</h3>
+</h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Function to create a CyberRT reader and assign the previously defined callback function to it</p>
+      <p>Manager function to receive data from the ADS and control the ego vehicle in Carla accordingly</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>CARLA_HOST</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>Host IP of Carla server</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>CARLA_PORT</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Port of Carla server</p>
+        </div>
+      </li>
+  </ul>
 
   </div>
 
@@ -1336,28 +1051,34 @@
 
 
 
-<h3 id="src.ads.cyberReader.cReader.readMsgList" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">ads</span><span class="o">.</span><span class="n">cyberReader</span><span class="o">.</span><span class="n">cReader</span><span class="o">.</span><span class="n">readMsgList</span><span class="p">(</span><span class="n">clearFlag</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+<h2 id="src.sim.cosimManager.lidarReader" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">lidarReader</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
 
-</h3>
+</h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Thread locked function to read the control commands and control command list before sending to the simulator</p>
+      <p>Manager function to send Lidar data on the bridge</p>
 
 
 
   <p>Parameters:</p>
   <ul>
       <li class="field-body">
-        <b><code>clearFlag</code></b>
-            (<code>bool</code>, default:
-                <code>True</code>
-)
+        <b><code>CARLA_HOST</code></b>
+            (<code>string</code>)
         –
         <div class="doc-md-description">
-          <p>Flag to indicate if the backlog of contol commands have been cleared or not</p>
+          <p>Host IP of Carla server</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>CARLA_PORT</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Port of Carla server</p>
         </div>
       </li>
   </ul>
@@ -1367,14 +1088,115 @@
 </div>
 
 
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.sim.cosimManager.parseEgoSnapshot" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">parseEgoSnapshot</span><span class="p">(</span><span class="n">snap</span><span class="p">,</span> <span class="n">egoID</span><span class="p">,</span> <span class="n">carlamap</span><span class="p">,</span> <span class="n">throttle</span><span class="p">,</span> <span class="n">brake</span><span class="p">,</span> <span class="n">steering</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse the Carla snapshot to extract ego vehicle data</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>snap</code></b>
+            (<code><span title="carla.Snapshot">Snapshot</span></code>)
+        –
+        <div class="doc-md-description">
+          <p>Carla snapshot to be parsed</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>egoID</code></b>
+        –
+        <div class="doc-md-description">
+          <p>ID of the ego vehicle which is a carla.actor </p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>carlamap</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Carla world.map object used to get properties such as those for geolocation transformation</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>throttle</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Throttle value taken from the ADS to be fed back in the ego state message</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>brake</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Brake value taken from the ADS to be fed back in the ego state message</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>steering</code></b>
+        –
+        <div class="doc-md-description">
+          <p>Steering value taken from the ADS to be fed back in the ego state message</p>
+        </div>
+      </li>
+  </ul>
+      <p>Returns:
+    A tuple including all properties pertaining to the ego vehicle state</p>
 
   </div>
-
-  </div>
-
 
 </div>
 
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.sim.cosimManager.scenarioPlayer" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">src</span><span class="o">.</span><span class="n">sim</span><span class="o">.</span><span class="n">cosimManager</span><span class="o">.</span><span class="n">scenarioPlayer</span><span class="p">(</span><span class="n">CARLA_HOST</span><span class="p">,</span> <span class="n">CARLA_PORT</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Manager function to control carla actors</p>
+
+
+
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b><code>CARLA_HOST</code></b>
+            (<code>string</code>)
+        –
+        <div class="doc-md-description">
+          <p>Host IP of Carla server</p>
+        </div>
+      </li>
+      <li class="field-body">
+        <b><code>CARLA_PORT</code></b>
+            (<code>int</code>)
+        –
+        <div class="doc-md-description">
+          <p>Port of Carla server</p>
+        </div>
+      </li>
+  </ul>
+
+  </div>
+
+</div>
 
 
 
@@ -1419,7 +1241,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../bridgeClient/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bridge client">
+          <a href="../prerequisites/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prerequisites">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1429,11 +1251,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Bridge client
+                Prerequisites
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../bridgeClient/" class="md-footer__link md-footer__link--next" aria-label="Next: Bridge client">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Bridge client
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

@@ -12,15 +12,15 @@
         <link rel="prev" href="../architecture/">
       
       
-        <link rel="next" href="../../cosim_framework/bridgeClient/">
+        <link rel="next" href="../../cosim_framework/prerequisites/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>Map creation workflow - CoSIM - CETRAN open-source SIMulation framework</title>
+        <title>Map creation workflow - CoSim - CETRAN open-source Simulation framework</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="CoSIM - CETRAN open-source SIMulation framework" class="md-header__button md-logo" aria-label="CoSIM - CETRAN open-source SIMulation framework" data-md-component="logo">
+    <a href="../.." title="CoSim - CETRAN open-source Simulation framework" class="md-header__button md-logo" aria-label="CoSim - CETRAN open-source Simulation framework" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CoSIM - CETRAN open-source SIMulation framework
+            CoSim - CETRAN open-source Simulation framework
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -168,6 +168,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/cetran-sg/CoSim" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cetran-sg/CoSim
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -193,14 +205,26 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="CoSIM - CETRAN open-source SIMulation framework" class="md-nav__button md-logo" aria-label="CoSIM - CETRAN open-source SIMulation framework" data-md-component="logo">
+    <a href="../.." title="CoSim - CETRAN open-source Simulation framework" class="md-nav__button md-logo" aria-label="CoSim - CETRAN open-source Simulation framework" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    CoSIM - CETRAN open-source SIMulation framework
+    CoSim - CETRAN open-source Simulation framework
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cetran-sg/CoSim" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cetran-sg/CoSim
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -215,7 +239,7 @@
         
   
   <span class="md-ellipsis">
-    CoSIM Documentation
+    CoSim Documentation
   </span>
   
 
@@ -359,6 +383,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apollo-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apollo map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carla-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carla map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -391,14 +439,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    CoSIM framework
+    CoSim framework
   </span>
   
 
@@ -408,9 +458,51 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            CoSIM framework
+            CoSim framework
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cosim_framework/prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cosim_framework/cosimManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CoSim Manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -445,27 +537,6 @@
   
   <span class="md-ellipsis">
     Bridge server
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cosim_framework/scenarioFramework/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Scenario framework
   </span>
   
 
@@ -533,6 +604,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apollo-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apollo map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carla-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carla map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -557,6 +652,9 @@
 
                   
 
+  
+  
+
 
 <h1 id="map-creation-workflow">Map creation workflow</h1>
 <p>This section describes the workflow for creating maps compliant with the CoSIM framework and its reference bridge to the Baidu Apollo ADS.</p>
@@ -568,13 +666,41 @@
 <ol>
 <li><strong>Carla</strong> - As per the latest verion of Carla, <a href="https://carla.readthedocs.io/en/latest/tuto_M_generate_map/">RoadRunner exports</a> have to be fulfilled in the Unreal Editor Datasmith format along with an OpenDRIVE file. Datasmith serves as a robust file format and workflow toolkit designed to streamline the integration of 3D data from various design and modeling applications into Unreal Engine. It intelligently converts lights and materials, preserving metadata, hierarchy, and enabling automatic updates for iterative design processes. The format facilitates photorealistic visualization within Unreal Engine, making it easy to quickly generate and update road models from RoadRunner.</li>
 <li><strong>Apollo</strong> - Apollo requires the map in a specific ProtoBuf HD map format with semantic information about road features such as individual lanes. RoadRunner supports Apollo export in both plaintext and binary formats.</li>
-<li><strong>SUMO</strong> - SUMO, if used for traffic simulation, requires the OpenDRIVE file to generate its own map network. Once the file is imported into SUMO, it must be post-processed to enable left-hand driving, as SUMO in its default configuration only supports right-hand driving.</li>
+<li><strong>SUMO</strong> - SUMO, if used for traffic simulation, requires the OpenDRIVE file to generate its own map network. Once the file is imported into SUMO, it must be post-processed to enable left-hand driving, as SUMO in its default configuration only supports right-hand driving. For more details, refer <a href="https://sumo.dlr.de/docs/FAQ.html">here</a>.</li>
 </ol>
 <h2 id="base-map">Base map</h2>
 <p>For generating a map based on real-world locations, the first step of the workflow is to import ground-truth geospatial data. This could be in the form of GIS vector data, pointclouds or even accurately scaled drawings or map images.</p>
 <p>For example, we can use the Singapore Land Traffic Authority's (LTA) publicly available kerbline dataset as the ground-truth data. The kerbline data is available freely as a ShapeFile (SHP) for the entire island of Singapore on the <a href="https://datamall.lta.gov.sg/content/datamall/en/static-data.html#Whole%20Island">Land Transport DataMall</a>. Using a free GIS software such as QGIS, we can isolate the area required for the simulation map before exporting the SHP file to <a href="https://en.wikipedia.org/wiki/GPS_Exchange_Format">GPS Exchange (GPX) format</a> or <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON format</a> which can be imported into the RoadRunner workspace.</p>
 <h2 id="export">Export</h2>
-<p>The RoadRunner map, once modelled, can be <a href="https://www.mathworks.com/videos/importing-and-exporting-scenes-with-roadrunner-1597837006663.html">exported to various formats</a> as is required for the simulation test framework.</p>
+<p>The RoadRunner map, once modelled, can be <a href="https://www.mathworks.com/videos/importing-and-exporting-scenes-with-roadrunner-1597837006663.html">exported to various formats</a> as is required for the simulation test framework. The maps used for the ADS and the simulator have to match.</p>
+<p>For the reference implentation, the map is recommended to be exported to the Unreal Datasmith format for Carla and the Baidu Apollo .bin format for the ADS. Carla coordinate system is the same as the exported map coordinates except with an inverted y-axis (as -y).</p>
+<h3 id="apollo-map">Apollo map</h3>
+<p>The Apollo map has an arbitrary offset which is specified in the <code>config.py</code> file and is applied to the localization messages.</p>
+<ol>
+<li>
+<p>To find this offset, create a 5m long road from (0,0) to (0,5) in RoadRunner. Export the OpenDrive (.xodr) and Apollo map (.txt, .bin) formats.</p>
+</li>
+<li>
+<p>From the .xodr, find the ID of the road. Find the same road ID in the Apollo .txt file and note the x and y values. These values are the offset. This offset value must be updated in the <code>config.py</code> file.</p>
+</li>
+<li>
+<p>After this, copy the map files into a new directory (named after your map) on the ADS machine at <code>/apollo/modules/maps/data/</code>. The file should be named <code>base_map.bin</code>.</p>
+</li>
+<li>
+<p><code>bazel-bin/modules/map/tools/proto_map_generator --map_dir=INPUT_DIR
+--output_dir=OUTPUT_DIR</code></p>
+</li>
+<li>
+<p><code>bazel-bin/modules/map/tools/sim_map_generator --map_dir=INPUT_DIR
+--output_dir=OUTPUT_DIR</code></p>
+</li>
+<li>
+<p><code>scripts/generate_routing_topo_graph.sh --map_dir=INPUT_DIR</code></p>
+</li>
+</ol>
+<p>Refer <a href="https://github.com/ApolloAuto/apollo/tree/master/modules/map/data">here</a> for more details on Apollo's map requirements.</p>
+<h3 id="carla-map">Carla map</h3>
+<p>To import maps into Carla, users may follow the official guide <a href="https://carla.readthedocs.io/en/latest/tuto_M_custom_map_overview/">here</a>. This includes <a href="https://carla.readthedocs.io/en/latest/tuto_M_generate_map/">detailed instructions</a> on how to use RoadRunner to create maps for Carla.</p>
 
 
 
@@ -595,6 +721,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -622,13 +754,13 @@
         
         
           
-          <a href="../../cosim_framework/bridgeClient/" class="md-footer__link md-footer__link--next" aria-label="Next: Bridge client">
+          <a href="../../cosim_framework/prerequisites/" class="md-footer__link md-footer__link--next" aria-label="Next: Prerequisites">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Bridge client
+                Prerequisites
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -645,7 +777,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024  Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
+      Copyright &copy; 2024 Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
     </div>
   
   
@@ -661,10 +793,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.footer", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.footer", "navigation.instant", "navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
