@@ -23,6 +23,7 @@ The framework is able to output sensor data and incorporate realistic and random
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+    site/         # Documentation website HTML and other files
     src/
         ads/
             apolloBridgeServer.py           # The main server-side script for the Apollo bridge. Run inside Apollo Docker.
