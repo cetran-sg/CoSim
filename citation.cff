@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Vijay"
+  given-names: "Roshan"
+  orcid: "https://orcid.org/0009-0000-3337-7689"
+- family-names: "Piazzoni"
+  given-names: "Andrea"
+  orcid: "https://orcid.org/0000-0003-1734-2296"
+- family-names: "De Boer"
+  given-names: "Niels"
+  orcid: "https://orcid.org/0000-0002-3511-8573"
+title: "CoSim"
+version: 1.0
+doi: 10.5281/zenodo.10976511
+date-released: 2024-04-15
+url: "https://github.com/cetran-sg/CoSim"
