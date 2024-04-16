@@ -46,3 +46,19 @@ This repository and the code within is intended only as a reference for virtual 
 - [NTU](https://www.ntu.edu.sg/) - Nanyang Technological University, Singapore
 
 The CoSim framework has been developed and is maintained by [CETRAN](https://cetran.sg/).
+
+## Citation
+
+If you use CoSim, please cite this repository:
+
+```
+@software{Vijay_CoSim_2024,
+author = {Vijay, Roshan and Piazzoni, Andrea and De Boer, Niels},
+doi = {10.5281/zenodo.10976511},
+month = apr,
+title = {{CoSim}},
+url = {https://github.com/cetran-sg/CoSim},
+version = {1.0},
+year = {2024}
+}
+```
