@@ -17,6 +17,19 @@ theme:
     - search.suggest
     - search.highlight
   custom_dir: docs/overrides
+  icon:
+    logo: fontawesome/solid/car-on
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
 
 copyright: Copyright &copy; 2024 Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
 extra:
@@ -51,3 +64,5 @@ plugins:
             heading_level: 2
   - search
   - print-site:
+
+
