@@ -12,7 +12,7 @@
 *.cb2
 .*.lb
 
-site/*
+site/
 
 ## Intermediate documents:
 *.dvi
