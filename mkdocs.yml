@@ -32,8 +32,6 @@ theme:
         name: Switch to light mode
 
 copyright: Copyright &copy; 2024 Centre of Excellence for Testing & Research of Autonomous Vehicles - Nanyang Technological University
-extra:
-  generator: false
 
 nav:
 - 'index.md'
