@@ -19,11 +19,10 @@ The framework is able to output sensor data and incorporate realistic and random
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
+    mkdocs.yml                              # The configuration file.
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-    site/         # Documentation website HTML and other files
+        index.md                            # The documentation homepage.
+        ...                                 # Other markdown pages, images and other files.
     src/
         ads/
             apolloBridgeServer.py           # The main server-side script for the Apollo bridge. Run inside Apollo Docker.
@@ -32,12 +31,12 @@ The framework is able to output sensor data and incorporate realistic and random
         sim/
             modules/                        # Directory containing protobuf modules for Apollo messages
             agents/                         # Directory containing some Carla Python API modules for scenario generation and execution
-            cosimManager.py                 # The main script for the CoSIM simulation framework.
+            cosimManager.py                 # The main script for the CoSim framework.
             bridgeClient.py                 # The main client-side classes for the Apollo bridge.
             apolloEncode.py                 # Methods to encode and decode ProtoBuf messages as required by Apollo.
             sensorManager.py                # Module to define ego vehicle sensors and placement
             scenarioManager.py              # Module to spawn actors and make them execute scenarios using the Carla Python API
-            config.py                       # File containing configuration parameters
-            sensorConfig.py                 # File containing configuration parameters pertaining to the sensor setup of the ego vehicle
+            config.py                       # File containing general configuration parameters.
+            sensorConfig.py                 # File containing configuration parameters pertaining to the sensor setup of the ego vehicle.
 
 To get started, take a look at the general architecture of the CoSim framework in the next section.
